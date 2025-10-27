@@ -1,0 +1,582 @@
+:root {
+  --color-border-default: var(--dnero-semantic-disabled-50);
+  --color-border-focus: var(--dnero-primary-60);
+  --color-border-error: var(--dnero-semantic-error-50);
+  --color-border-disabled: var(--dnero-semantic-disabled-50);
+  --input-border-radius: 8px;
+  --color-label: var(--dnero-semantic-disabled-50);
+  --color-text: var(--dnero-semantic-disabled-80);
+  --color-placeholder: var(--dnero-semantic-disabled-50);
+  --color-disabled: var(--dnero-semantic-disabled-50);
+  --color-helper: var(--dnero-semantic-disabled-50);
+  --transition: 0.2s ease;
+
+  --font-size-input: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
+  --font-size-label: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
+  --font-size-label-small: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px);
+  --dnero-text-area-height: 90px;
+  --dnero-input-width: 334px;
+  --dnero-help-text-left-padding: 8px;
+  --dnero-help-text-margin: 5px
+}
+
+/* Contenedor general */
+.input-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  font-family: var(--dnero-laptop-sans-serif), sans serif;
+}
+
+/* Input base */
+.input-field input,
+.input-field select,
+.input-field textarea {
+  width: var(--dnero-input-width);
+  font-size: calc(var(--font-size-input) * 1px);
+  padding: var(--dnero-m);
+  border: var(--dnero-x-s) solid var(--color-border-default);
+  border-radius: var(--input-border-radius);
+  background: transparent;
+  outline: none;
+  transition: border-color var(--transition), color var(--transition);
+  color: var(--color-text);
+  height: var(--dnero-input-height);
+}
+
+.input-field textarea {
+  height: var(--dnero-text-area-height);
+}
+
+/* Label flotante */
+.input-field label {
+  position: absolute;
+  top: 15px;
+  left: var(--dnero-m);
+  font-size: calc(var(--font-size-label) * 1px);
+  color: var(--color-label);
+  pointer-events: none;
+  background: white;
+  transition: all var(--transition);
+}
+
+/* Placeholder */
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+  color: var(--color-placeholder);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+/* Focus y filled: el label se mueve ligeramente hacia arriba, no toca el borde */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:not(:placeholder-shown) ~ label {
+  top: 6px;
+  font-size: 10px !important;
+  color: var(--color-border-focus);
+  left: 16px;
+}
+
+.input-field input:focus ~ .helper-text,
+.input-field textarea:focus ~ .helper-text,
+.input-field select:focus ~ .helper-text {
+  color: var(--color-border-focus);
+}
+
+.input-field input:focus::placeholder {
+  opacity: 1;
+}
+
+.input-field input:focus,
+.input-field textarea:focus,
+.input-field select:focus {
+  border: var(--dnero-x-s) solid var(--color-border-focus);
+}
+
+.input-field textarea:focus::placeholder {
+  opacity: 1;
+}
+
+
+/* Estado filled */
+.input-field input:not(:placeholder-shown) {
+  color: var(--color-text);
+}
+
+/* Estado Disabled */
+.input-field input:disabled {
+  border-color: var(--color-border-disabled);
+  color: var(--color-disabled);
+  background: var(--dnero-semantic-disabled-10);
+  cursor: not-allowed;
+}
+
+.input-field input:disabled ~ label {
+  color: var(--color-disabled);
+}
+
+/* Estado Error */
+.input-field.error input {
+  border-color: var(--color-border-error);
+}
+
+.input-field.error label {
+  color: var(--color-border-error);
+}
+
+/* Helper text */
+.helper-text {
+  font-size: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px);
+  color: var(--color-helper);
+  margin-top: var(--dnero-help-text-margin);
+  padding-left: var(--dnero-help-text-left-padding);
+}
+
+/* ===== Dropdown base ===== */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: var(--dnero-input-width);
+  max-height: 220px;
+  overflow-y: auto;
+  background: var(--dnero-neutral-white);
+  border-radius: var(--input-border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 4px 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-sizing: border-box;
+}
+
+/* Mostrar cuando está abierto */
+.input-field.dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  z-index: 100;
+}
+
+/* ===== Items base ===== */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: var(--font-size-input);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background var(--transition);
+  border-radius: 6px;
+}
+
+.dropdown-item:hover,
+.dropdown-item.selected {
+  background: var(--dnero-primary-10);
+}
+
+/* ===== Checkbox items ===== */
+/* .dropdown-item .checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.dropdown-item .checkbox input[type="checkbox"] {
+  cursor: pointer;
+} */
+
+/* ===== Para evitar estrechez visual ===== */
+.input-field.dropdown {
+  width: var(--dnero-input-width);
+}
+
+/* Scrollbar más limpia */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+/* === Dropdown con checkboxes usando tus estilos originales === */
+.checkbox-menu {
+  display: flex;
+  flex-direction: column;
+  width: var(--dnero-input-width);
+  background: #fff;
+  border-radius: var(--input-border-radius);
+  box-sizing: border-box;
+}
+
+.checkbox-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: background var(--transition);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.checkbox-menu .dropdown-item:hover {
+  background: var(--dnero-primary-10);
+}
+
+/* Aplica tu checkbox original dentro del dropdown */
+.checkbox-menu .checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkbox-menu .checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox-menu .checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--cb-size);
+  height: var(--cb-size);
+  border: 2px solid var(--cb-border);
+  border-radius: var(--cb-border-radius);
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Checkmark activo */
+.checkbox-menu .checkmark::after {
+  content: "";
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg) scale(0);
+  transition: transform 0.2s ease;
+}
+
+/* Checked */
+.checkbox-menu input:checked + .checkmark {
+  background-color: var(--cb-blue);
+  border-color: var(--cb-blue);
+}
+
+.checkbox-menu input:checked + .checkmark::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+/* Hover */
+.checkbox-menu input:not(:disabled) + .checkmark:hover {
+  box-shadow: 0 0 0 6px var(--cb-shadow-hover);
+  border-color: var(--cb-blue-hover);
+}
+
+/* Hover cuando está checked */
+.checkbox-menu input:not(:disabled):checked + .checkmark:hover {
+  background-color: var(--cb-blue-hover);
+}
+
+/* Active */
+.checkbox-menu input:not(:disabled):active + .checkmark {
+  background-color: var(--cb-blue-active);
+  border-color: var(--cb-blue-active);
+  box-shadow: 0 0 0 6px var(--cb-shadow-hover);
+}
+
+/* Disabled */
+.checkbox-menu input:disabled + .checkmark {
+  background-color: var(--cb-bg-disabled);
+  border-color: var(--cb-gray);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Texto de los ítems */
+.checkbox-menu .btn-text-m {
+  color: var(--color-text);
+  font-size: var(--font-size-input);
+  line-height: 1.2;
+  user-select: none;
+}
+
+
+
+/* ===== Checkbox ===== */
+/* .dropdown-item .checkbox {
+  display: flex;
+  align-items: center;
+}
+.dropdown-item input[type="checkbox"] {
+  margin: 0;
+}
+ */
+/* ===== Variante teléfono ===== */
+.phone .dropdown-item .flag {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Dropdown con flecha */
+.input-field.select select {
+  appearance: none;
+  background: transparent url("data:image/svg+xml,%3Csvg fill='none' stroke='%23999' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background-size: 14px;
+  padding-right: 30px;
+}
+
+/* Input search base */
+.input-field.search input[type="search"] {
+  width: var(--dnero-input-width);
+  padding-left: 38px;
+  padding-right: 32px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M14.0465 11.865L12.6665 10.4517C12.3697 10.1695 11.9952 9.98259 11.5913 9.91487C11.1874 9.84716 10.7725 9.90178 10.3998 10.0717L9.79983 9.47171C10.5069 8.52699 10.8298 7.34949 10.7035 6.17627C10.5773 5.00304 10.0113 3.92119 9.11945 3.14851C8.22762 2.37583 7.07619 1.96968 5.89694 2.01183C4.71769 2.05398 3.5982 2.5413 2.76381 3.37569C1.92942 4.21007 1.44211 5.32957 1.39995 6.50882C1.3578 7.68806 1.76395 8.8395 2.53663 9.73133C3.30931 10.6232 4.39116 11.1892 5.56439 11.3154C6.73762 11.4416 7.91511 11.1187 8.85983 10.4117L9.45316 11.005C9.26322 11.3781 9.19515 11.8014 9.25854 12.2152C9.32193 12.6291 9.51359 13.0126 9.8065 13.3117L11.2198 14.725C11.5948 15.0996 12.1032 15.3099 12.6332 15.3099C13.1632 15.3099 13.6715 15.0996 14.0465 14.725C14.237 14.5388 14.3883 14.3163 14.4917 14.0708C14.595 13.8252 14.6482 13.5615 14.6482 13.295C14.6482 13.0286 14.595 12.7649 14.4917 12.5193C14.3883 12.2737 14.237 12.0513 14.0465 11.865ZM8.39316 9.03838C7.92665 9.50371 7.3327 9.82034 6.68632 9.94827C6.03995 10.0762 5.37016 10.0097 4.76157 9.75717C4.15297 9.50463 3.63287 9.07738 3.26697 8.5294C2.90107 7.98142 2.70579 7.33729 2.70579 6.67838C2.70579 6.01946 2.90107 5.37533 3.26697 4.82735C3.63287 4.27937 4.15297 3.85212 4.76157 3.59958C5.37016 3.34704 6.03995 3.28054 6.68632 3.40848C7.3327 3.53641 7.92665 3.85304 8.39316 4.31838C8.70359 4.62801 8.94987 4.99585 9.11791 5.40082C9.28596 5.80578 9.37246 6.23993 9.37246 6.67838C9.37246 7.11682 9.28596 7.55097 9.11791 7.95593C8.94987 8.3609 8.70359 8.72874 8.39316 9.03838ZM13.1065 13.7517C13.0445 13.8142 12.9708 13.8638 12.8895 13.8976C12.8083 13.9315 12.7212 13.9489 12.6332 13.9489C12.5452 13.9489 12.458 13.9315 12.3768 13.8976C12.2955 13.8638 12.2218 13.8142 12.1598 13.7517L10.7465 12.3384C10.684 12.2764 10.6344 12.2027 10.6006 12.1214C10.5667 12.0402 10.5493 11.953 10.5493 11.865C10.5493 11.777 10.5667 11.6899 10.6006 11.6087C10.6344 11.5274 10.684 11.4537 10.7465 11.3917C10.8085 11.3292 10.8822 11.2796 10.9634 11.2458C11.0447 11.2119 11.1318 11.1945 11.2198 11.1945C11.3078 11.1945 11.395 11.2119 11.4762 11.2458C11.5575 11.2796 11.6312 11.3292 11.6932 11.3917L13.1065 12.805C13.169 12.867 13.2186 12.9408 13.2524 13.022C13.2863 13.1032 13.3037 13.1904 13.3037 13.2784C13.3037 13.3664 13.2863 13.4535 13.2524 13.5348C13.2186 13.616 13.169 13.6897 13.1065 13.7517Z' fill='%23999'/%3E%3C/svg%3E") no-repeat 12px center;
+  background-size: 16px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+/* Ícono cambia de color en focus */
+.input-field.search input[type="search"]:focus {
+  border-color: var(--color-border-focus);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M14.0465 11.865L12.6665 10.4517C12.3697 10.1695 11.9952 9.98259 11.5913 9.91487C11.1874 9.84716 10.7725 9.90178 10.3998 10.0717L9.79983 9.47171C10.5069 8.52699 10.8298 7.34949 10.7035 6.17627C10.5773 5.00304 10.0113 3.92119 9.11945 3.14851C8.22762 2.37583 7.07619 1.96968 5.89694 2.01183C4.71769 2.05398 3.5982 2.5413 2.76381 3.37569C1.92942 4.21007 1.44211 5.32957 1.39995 6.50882C1.3578 7.68806 1.76395 8.8395 2.53663 9.73133C3.30931 10.6232 4.39116 11.1892 5.56439 11.3154C6.73762 11.4416 7.91511 11.1187 8.85983 10.4117L9.45316 11.005C9.26322 11.3781 9.19515 11.8014 9.25854 12.2152C9.32193 12.6291 9.51359 13.0126 9.8065 13.3117L11.2198 14.725C11.5948 15.0996 12.1032 15.3099 12.6332 15.3099C13.1632 15.3099 13.6715 15.0996 14.0465 14.725C14.237 14.5388 14.3883 14.3163 14.4917 14.0708C14.595 13.8252 14.6482 13.5615 14.6482 13.295C14.6482 13.0286 14.595 12.7649 14.4917 12.5193C14.3883 12.2737 14.237 12.0513 14.0465 11.865ZM8.39316 9.03838C7.92665 9.50371 7.3327 9.82034 6.68632 9.94827C6.03995 10.0762 5.37016 10.0097 4.76157 9.75717C4.15297 9.50463 3.63287 9.07738 3.26697 8.5294C2.90107 7.98142 2.70579 7.33729 2.70579 6.67838C2.70579 6.01946 2.90107 5.37533 3.26697 4.82735C3.63287 4.27937 4.15297 3.85212 4.76157 3.59958C5.37016 3.34704 6.03995 3.28054 6.68632 3.40848C7.3327 3.53641 7.92665 3.85304 8.39316 4.31838C8.70359 4.62801 8.94987 4.99585 9.11791 5.40082C9.28596 5.80578 9.37246 6.23993 9.37246 6.67838C9.37246 7.11682 9.28596 7.55097 9.11791 7.95593C8.94987 8.3609 8.70359 8.72874 8.39316 9.03838ZM13.1065 13.7517C13.0445 13.8142 12.9708 13.8638 12.8895 13.8976C12.8083 13.9315 12.7212 13.9489 12.6332 13.9489C12.5452 13.9489 12.458 13.9315 12.3768 13.8976C12.2955 13.8638 12.2218 13.8142 12.1598 13.7517L10.7465 12.3384C10.684 12.2764 10.6344 12.2027 10.6006 12.1214C10.5667 12.0402 10.5493 11.953 10.5493 11.865C10.5493 11.777 10.5667 11.6899 10.6006 11.6087C10.6344 11.5274 10.684 11.4537 10.7465 11.3917C10.8085 11.3292 10.8822 11.2796 10.9634 11.2458C11.0447 11.2119 11.1318 11.1945 11.2198 11.1945C11.3078 11.1945 11.395 11.2119 11.4762 11.2458C11.5575 11.2796 11.6312 11.3292 11.6932 11.3917L13.1065 12.805C13.169 12.867 13.2186 12.9408 13.2524 13.022C13.2863 13.1032 13.3037 13.1904 13.3037 13.2784C13.3037 13.3664 13.2863 13.4535 13.2524 13.5348C13.2186 13.616 13.169 13.6897 13.1065 13.7517Z' fill='%230462FC'/%3E%3C/svg%3E");
+}
+
+/* Label alineado */
+.input-field.search label {
+  left: 38px;
+}
+
+/* Label más a la derecha en focus o texto */
+.input-field.search input:focus ~ label,
+.input-field.search input:not(:placeholder-shown) ~ label {
+  top: 6px;
+  font-size: 10px !important;
+  color: var(--color-border-focus);
+  left: 39px;
+}
+
+/* Asegura que el botón quede dentro y solo se renderice una vez */
+.input-field.search {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-field.search .search-wrapper {
+  position: relative;
+  width: var(--dnero-input-width);
+}
+
+/* Botón “X” */
+.input-field.search .clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M8.93996 8.645L11.8066 5.785C11.9322 5.65946 12.0027 5.4892 12.0027 5.31167C12.0027 5.13413 11.9322 4.96387 11.8066 4.83833C11.6811 4.7128 11.5108 4.64227 11.3333 4.64227C11.1558 4.64227 10.9855 4.7128 10.86 4.83833L7.99996 7.705L5.13996 4.83833C5.01442 4.7128 4.84416 4.64227 4.66663 4.64227C4.48909 4.64227 4.31883 4.7128 4.19329 4.83833C4.06776 4.96387 3.99723 5.13413 3.99723 5.31167C3.99723 5.4892 4.06776 5.65946 4.19329 5.785L7.05996 8.645L4.19329 11.505C4.13081 11.567 4.08121 11.6407 4.04737 11.7219C4.01352 11.8032 3.99609 11.8903 3.99609 11.9783C3.99609 12.0663 4.01352 12.1535 4.04737 12.2347C4.08121 12.316 4.13081 12.3897 4.19329 12.4517C4.25527 12.5142 4.329 12.5637 4.41024 12.5976C4.49148 12.6314 4.57862 12.6489 4.66663 12.6489C4.75463 12.6489 4.84177 12.6314 4.92301 12.5976C5.00425 12.5637 5.07798 12.5142 5.13996 12.4517L7.99996 9.585L10.86 12.4517C10.9219 12.5142 10.9957 12.5637 11.0769 12.5976C11.1581 12.6314 11.2453 12.6489 11.3333 12.6489C11.4213 12.6489 11.5084 12.6314 11.5897 12.5976C11.6709 12.5637 11.7447 12.5142 11.8066 12.4517C11.8691 12.3897 11.9187 12.316 11.9526 12.2347C11.9864 12.1535 12.0038 12.0663 12.0038 11.9783C12.0038 11.8903 11.9864 11.8032 11.9526 11.7219C11.9187 11.6407 11.8691 11.567 11.8066 11.505L8.93996 8.645Z' fill='%23999'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 16px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  color: var(--color-border-focus);
+  transition: opacity var(--transition), background var(--transition);
+}
+
+.input-field.search input[type="search"] {
+  width: 100%;
+  padding-left: 38px;
+  padding-right: 32px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M14.0465 11.865L12.6665 10.4517C12.3697 10.1695 11.9952 9.98259 11.5913 9.91487C11.1874 9.84716 10.7725 9.90178 10.3998 10.0717L9.79983 9.47171C10.5069 8.52699 10.8298 7.34949 10.7035 6.17627C10.5773 5.00304 10.0113 3.92119 9.11945 3.14851C8.22762 2.37583 7.07619 1.96968 5.89694 2.01183C4.71769 2.05398 3.5982 2.5413 2.76381 3.37569C1.92942 4.21007 1.44211 5.32957 1.39995 6.50882C1.3578 7.68806 1.76395 8.8395 2.53663 9.73133C3.30931 10.6232 4.39116 11.1892 5.56439 11.3154C6.73762 11.4416 7.91511 11.1187 8.85983 10.4117L9.45316 11.005C9.26322 11.3781 9.19515 11.8014 9.25854 12.2152C9.32193 12.6291 9.51359 13.0126 9.8065 13.3117L11.2198 14.725C11.5948 15.0996 12.1032 15.3099 12.6332 15.3099C13.1632 15.3099 13.6715 15.0996 14.0465 14.725C14.237 14.5388 14.3883 14.3163 14.4917 14.0708C14.595 13.8252 14.6482 13.5615 14.6482 13.295C14.6482 13.0286 14.595 12.7649 14.4917 12.5193C14.3883 12.2737 14.237 12.0513 14.0465 11.865ZM8.39316 9.03838C7.92665 9.50371 7.3327 9.82034 6.68632 9.94827C6.03995 10.0762 5.37016 10.0097 4.76157 9.75717C4.15297 9.50463 3.63287 9.07738 3.26697 8.5294C2.90107 7.98142 2.70579 7.33729 2.70579 6.67838C2.70579 6.01946 2.90107 5.37533 3.26697 4.82735C3.63287 4.27937 4.15297 3.85212 4.76157 3.59958C5.37016 3.34704 6.03995 3.28054 6.68632 3.40848C7.3327 3.53641 7.92665 3.85304 8.39316 4.31838C8.70359 4.62801 8.94987 4.99585 9.11791 5.40082C9.28596 5.80578 9.37246 6.23993 9.37246 6.67838C9.37246 7.11682 9.28596 7.55097 9.11791 7.95593C8.94987 8.3609 8.70359 8.72874 8.39316 9.03838ZM13.1065 13.7517C13.0445 13.8142 12.9708 13.8638 12.8895 13.8976C12.8083 13.9315 12.7212 13.9489 12.6332 13.9489C12.5452 13.9489 12.458 13.9315 12.3768 13.8976C12.2955 13.8638 12.2218 13.8142 12.1598 13.7517L10.7465 12.3384C10.684 12.2764 10.6344 12.2027 10.6006 12.1214C10.5667 12.0402 10.5493 11.953 10.5493 11.865C10.5493 11.777 10.5667 11.6899 10.6006 11.6087C10.6344 11.5274 10.684 11.4537 10.7465 11.3917C10.8085 11.3292 10.8822 11.2796 10.9634 11.2458C11.0447 11.2119 11.1318 11.1945 11.2198 11.1945C11.3078 11.1945 11.395 11.2119 11.4762 11.2458C11.5575 11.2796 11.6312 11.3292 11.6932 11.3917L13.1065 12.805C13.169 12.867 13.2186 12.9408 13.2524 13.022C13.2863 13.1032 13.3037 13.1904 13.3037 13.2784C13.3037 13.3664 13.2863 13.4535 13.2524 13.5348C13.2186 13.616 13.169 13.6897 13.1065 13.7517Z' fill='%23999'/%3E%3C/svg%3E") no-repeat 12px center;
+  background-size: 16px;
+}
+
+/* Mostrar la X cuando hay texto o hover */
+.input-field.search input:not(:placeholder-shown) ~ .clear-btn,
+.input-field.search:hover .clear-btn {
+  opacity: 0.6;
+}
+
+/* Hover/focus de la X */
+.input-field.search .clear-btn:hover {
+  color: var(--color-border-focus);
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M8.93996 8.645L11.8066 5.785C11.9322 5.65946 12.0027 5.4892 12.0027 5.31167C12.0027 5.13413 11.9322 4.96387 11.8066 4.83833C11.6811 4.7128 11.5108 4.64227 11.3333 4.64227C11.1558 4.64227 10.9855 4.7128 10.86 4.83833L7.99996 7.705L5.13996 4.83833C5.01442 4.7128 4.84416 4.64227 4.66663 4.64227C4.48909 4.64227 4.31883 4.7128 4.19329 4.83833C4.06776 4.96387 3.99723 5.13413 3.99723 5.31167C3.99723 5.4892 4.06776 5.65946 4.19329 5.785L7.05996 8.645L4.19329 11.505C4.13081 11.567 4.08121 11.6407 4.04737 11.7219C4.01352 11.8032 3.99609 11.8903 3.99609 11.9783C3.99609 12.0663 4.01352 12.1535 4.04737 12.2347C4.08121 12.316 4.13081 12.3897 4.19329 12.4517C4.25527 12.5142 4.329 12.5637 4.41024 12.5976C4.49148 12.6314 4.57862 12.6489 4.66663 12.6489C4.75463 12.6489 4.84177 12.6314 4.92301 12.5976C5.00425 12.5637 5.07798 12.5142 5.13996 12.4517L7.99996 9.585L10.86 12.4517C10.9219 12.5142 10.9957 12.5637 11.0769 12.5976C11.1581 12.6314 11.2453 12.6489 11.3333 12.6489C11.4213 12.6489 11.5084 12.6314 11.5897 12.5976C11.6709 12.5637 11.7447 12.5142 11.8066 12.4517C11.8691 12.3897 11.9187 12.316 11.9526 12.2347C11.9864 12.1535 12.0038 12.0663 12.0038 11.9783C12.0038 11.8903 11.9864 11.8032 11.9526 11.7219C11.9187 11.6407 11.8691 11.567 11.8066 11.505L8.93996 8.645Z' fill='%230462FC'/%3E%3C/svg%3E");
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* Teléfono */
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.flag-select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding-left: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* File input */
+.input-field.file input[type="file"] {
+  padding: 14px 12px;
+}/* === Input Teléfono (versión corregida) === */
+.input-field.phone {
+  position: relative;
+}
+
+.input-field.phone .phone-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: var(--dnero-x-s) solid var(--color-border-default);
+  border-radius: var(--input-border-radius);
+  transition: border-color var(--transition);
+  background: transparent;
+  height: var(--dnero-input-height);
+}
+
+/* Borde azul al focus */
+.input-field.phone:focus-within .phone-wrapper {
+  border-color: var(--color-border-focus);
+}
+
+/* === Botón de bandera (sin código) === */
+.input-field.phone .country-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+  border: none;
+  border-right: 1px solid var(--color-border-default);
+  background: transparent;
+  cursor: pointer;
+  padding: 0 12px;
+  color: var(--color-text);
+  font-size: var(--font-size-input);
+  outline: none;
+  min-width: 48px;
+}
+
+.input-field.phone .country-button .flag {
+  font-size: 18px;
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+
+.input-field.phone .country-button .arrow {
+  width: 12px;
+  height: 12px;
+  color: var(--color-placeholder);
+  transition: transform var(--transition);
+}
+
+.input-field.phone.open .country-button .arrow {
+  transform: rotate(180deg);
+}
+
+
+/* Input de número */
+.input-field.phone input[type="tel"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0 12px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--font-size-input);
+}
+
+/* Label flotante (ajustado para el botón a la izquierda) */
+.input-field.phone label {
+  left: 78px;
+  top: 15px;
+  background: white;
+  transition: all var(--transition);
+}
+
+.input-field.phone input:focus ~ label,
+.input-field.phone input:not(:placeholder-shown) ~ label {
+  top: 6px;
+  font-size: 10px !important;
+  color: var(--color-border-focus);
+  left: 78px;
+}
+
+/* Dropdown */
+.input-field.phone .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: var(--dnero-input-width);
+  max-height: 220px;
+  overflow-y: auto;
+  background: var(--dnero-neutral-white);
+  border-radius: var(--input-border-radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 4px 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 50;
+}
+
+.input-field.phone.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Ítems del dropdown */
+.input-field.phone .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: var(--font-size-input);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background var(--transition);
+  border-radius: 6px;
+}
+
+.input-field.phone .dropdown-item:hover {
+  background: var(--dnero-primary-10);
+}

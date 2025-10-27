@@ -1,0 +1,137 @@
+.image-accordion-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.accordion-text {
+  flex: 1;
+  min-width: 300px;
+  transition: opacity 0.1s ease;
+  text-align: left;
+}
+
+.accordion-text h2,
+.accordion-text p {
+  transition: opacity 0.1s ease;
+}
+
+.image-accordion {
+  display: flex;
+  flex: 2;
+  height: 702px;
+  gap: 17px;
+  overflow: hidden;
+  border-radius: 15px;
+  min-width: 400px;
+}
+
+.panel {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  filter: brightness(0.7);
+  border-radius: 15px;
+}
+
+.panel.active {
+  flex: 5;
+  filter: brightness(1);
+}
+
+/* Importar la fuente Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+.accordion-text {
+  font-family: 'Nunito', sans-serif;
+}
+
+.accordion-text h2 {
+  color: var(--color-primary-30);
+  font-weight: 700;
+  font-size: 2.3vw;
+  margin-bottom: 54px;
+}
+
+.accordion-text p {
+  color: var(--color-neutral-20); /* Negro */
+  font-weight: 400;
+  font-size: 1.6vw;
+  line-height: 140%;
+}
+
+@media (min-width: 2559px) {
+  .carousel-width-fix {
+    min-width: 2166px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .accordion-text h2 {
+  color: var(--color-primary-30);
+  font-weight: 700;
+  font-size: 3.4vw;
+  margin-bottom: 54px;
+}
+
+.accordion-text p {
+  color: var(--color-neutral-20);
+  font-weight: 400;
+  font-size: 2.6vw;
+  line-height: 140%;
+}
+}
+
+@media (max-width: 390px) {
+    .image-accordion {
+        min-width: 350px;
+    }
+    
+      .accordion-text {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+    
+    .image-accordion-container {
+    gap: 30px;
+}
+  .accordion-container {
+    flex-direction: column; /* ← aquí está la clave */
+  }
+
+  .accordion-text {
+    order: 1;
+    min-height: 134.19px;
+    text-align: center;
+  }
+
+.accordion-text h2 {
+  color: var(--color-primary-30);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.accordion-text p {
+  color: var(--color-neutral-20);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+  .accordion-images {
+    order: 2;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .image-accordion {
+  height: 277px;
+  gap: 5px;
+}
+
+}

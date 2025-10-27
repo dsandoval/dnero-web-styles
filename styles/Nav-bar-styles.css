@@ -1,0 +1,13 @@
+/* Dropdown X position */
+.elementor-8170 .elementor-element.elementor-element-d0ee30d .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-8170 .elementor-element.elementor-element-d0ee30d .elementor-nav-menu__container.elementor-nav-menu--dropdown {
+                margin-left: -42px !important;
+            }
+            
+ /* Internet icon styles */           
+.internet-icon {
+	color: white;
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    letter-spacing: 7px;
+    		}

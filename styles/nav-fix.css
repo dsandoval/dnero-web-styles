@@ -1,0 +1,13 @@
+#nav-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  background: transparent; /* sin color al inicio */
+  backdrop-filter: none; /* sin blur */
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
+}

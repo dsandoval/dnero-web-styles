@@ -1,0 +1,99 @@
+:root {
+  --radio-size: 22px;
+  --radio-border: var(--dnero-s);
+  --radio-color: var(--dnero-primary-60);
+  --radio-hover: var(--dnero-primary-60);
+  --radio-active: var(--dnero-primary-80);
+  --radio-disabled: var(--dnero-semantic-disabled-80);
+  --radio-bg-disabled: var(--dnero-semantic-disabled-10);
+  --radio-shadow-hover: var(--dnero-primary-10);
+}
+
+/* Layout de demo */
+.radio-group {
+  display: flex;
+  gap: 24px;
+  margin: var(--dnero-l);
+}
+
+/* Ocultar radio nativo */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Base */
+.radiomark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  border: var(--radio-border) solid var(--radio-color);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Círculo interior */
+.radiomark::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--radio-color);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+/* Checked */
+input:checked + .radiomark::after {
+  transform: scale(1);
+}
+
+/* Hover */
+input:not(:disabled) + .radiomark:hover {
+  box-shadow: 0 0 0 6px var(--radio-shadow-hover);
+  border-color: var(--radio-hover);
+}
+
+/* Hover checked */
+input:not(:disabled):checked + .radiomark:hover {
+  border-color: var(--radio-color);
+  background-color: var(--radio-shadow-hover);
+}
+input:not(:disabled):checked + .radiomark:hover::after {
+  background-color: var(--radio-hover);
+}
+
+/* Active (click sostenido) */
+input:not(:disabled):active + .radiomark {
+  box-shadow: 0 0 0 6px var(--radio-shadow-hover);
+  border-color: var(--radio-active);
+}
+input:not(:disabled):active + .radiomark::after {
+  background-color: var(--radio-active);
+}
+
+/* Active checked */
+input:not(:disabled):active:checked + .radiomark {
+  border-color: var(--radio-active);
+  background-color: var(--radio-shadow-hover);
+}
+input:not(:disabled):active:checked + .radiomark::after {
+  background-color: var(--radio-active);
+}
+
+/* Disabled */
+input:disabled + .radiomark {
+  border-color: var(--radio-disabled);
+  background-color: var(--radio-bg-disabled);
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+input:disabled:checked + .radiomark::after {
+  background-color: var(--radio-disabled);
+}

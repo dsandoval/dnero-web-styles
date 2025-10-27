@@ -1,0 +1,11 @@
+.social-media-container {
+display: flex;
+justify-content: start;
+align-items: center;
+gap: 10px;
+}
+.social-media-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}

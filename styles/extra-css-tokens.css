@@ -1,0 +1,8 @@
+/* Extra tokens */
+:root {
+  --dnero-button-border-radius: 10;
+  --dnero-button-L-padding: 1.25rem 3.04rem;
+  --dnero-button-m-padding: 0.938rem 2.44rem;
+  --dnero-button-s-padding: 0.625rem 2rem;
+  --dnero-button-m-height-fix: 40px;
+}
