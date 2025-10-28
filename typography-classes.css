@@ -171,3 +171,27 @@
 
 .italic { font-style: italic !important; }
 .uppercase { text-transform: uppercase !important; }
+
+.blue-text {
+  color: var(--dnero-primary-60);
+}
+
+.white-text {
+  color: var(--dnero-neutral-white);
+}
+
+.light-text {
+  color: var(--dnero-semantic-disabled-10);
+}
+
+.dark-text {
+  color: #21272A;
+}
+
+.green-text {
+  color: var(--dnero-secondary-yellow-green);
+}
+
+.black-text {
+  color: var(--dnero-black);
+}
