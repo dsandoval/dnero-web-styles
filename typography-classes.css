@@ -173,25 +173,25 @@
 .uppercase { text-transform: uppercase !important; }
 
 .blue-text {
-  color: var(--dnero-primary-60);
+  color: var(--dnero-primary-60) !important;
 }
 
 .white-text {
-  color: var(--dnero-neutral-white);
+  color: var(--dnero-neutral-white) !important;
 }
 
 .light-text {
-  color: var(--dnero-semantic-disabled-10);
+  color: var(--dnero-semantic-disabled-10) !important;
 }
 
 .dark-text {
-  color: #21272A;
+  color: #21272A !important;
 }
 
 .green-text {
-  color: var(--dnero-secondary-yellow-green);
+  color: var(--dnero-secondary-yellow-green) !important;
 }
 
 .black-text {
-  color: var(--dnero-black);
+  color: var(--dnero-black) !important;
 }
