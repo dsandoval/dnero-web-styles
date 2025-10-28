@@ -7,3 +7,13 @@
 #header-logo img {
   transition: opacity 0.3s ease;
 }
+
+.navbar-colored .internet-icon,
+.navbar-colored .sub-arrow {
+  color: var(--dnero-secondary-blue);
+}
+
+/* Cambiar color del link dentro de #language-menu */
+.navbar-colored #language-menu a {
+  color: var(--dnero-secondary-blue);
+}
