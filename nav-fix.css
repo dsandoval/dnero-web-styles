@@ -11,3 +11,11 @@
   border-bottom: none;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
 }
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+  #nav-section {
+    padding: 0.5rem 1rem;
+    height: 7rem;
+  }
+}
