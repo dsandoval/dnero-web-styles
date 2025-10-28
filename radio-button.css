@@ -1,14 +1,3 @@
-:root {
-  --radio-size: 22px;
-  --radio-border: var(--dnero-s);
-  --radio-color: var(--dnero-primary-60);
-  --radio-hover: var(--dnero-primary-60);
-  --radio-active: var(--dnero-primary-80);
-  --radio-disabled: var(--dnero-semantic-disabled-80);
-  --radio-bg-disabled: var(--dnero-semantic-disabled-10);
-  --radio-shadow-hover: var(--dnero-primary-10);
-}
-
 /* Layout de demo */
 .radio-group {
   display: flex;

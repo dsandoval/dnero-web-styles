@@ -1,8 +1,52 @@
 /* Extra tokens */
 :root {
+  /* Breakpoints */
+  --bp-smartphone: 768px;
+  --bp-tablet-horizontal: 1280px;
+  --bp-desktop: 1400px;
+  --bp-4k: 2400px;
+  /* Buttons */
   --dnero-button-border-radius: 10;
   --dnero-button-L-padding: 1.25rem 3.04rem;
   --dnero-button-m-padding: 0.938rem 2.44rem;
   --dnero-button-s-padding: 0.625rem 2rem;
   --dnero-button-m-height-fix: 40px;
+  /* Checkboxes */
+  --cb-size: 22px;
+  --cb-border-radius: 4px;
+  --cb-blue:var(--dnero-blue-60);
+  --cb-blue-hover:var(--dnero-primary-10);
+  --cb-blue-active:var(--dnero-blue-80);
+  --cb-gray: var(--dnero-semantic-disabled-80);
+  --cb-bg-disabled:var(--dnero-semantic-disabled-80);
+  --cb-border:var(--dnero-blue-60);
+  --cb-shadow-hover: rgba(74, 114, 255, 0.2);
+  /* Inputs */
+  --color-border-default: var(--dnero-semantic-disabled-50);
+  --color-border-focus: var(--dnero-primary-60);
+  --color-border-error: var(--dnero-semantic-error-50);
+  --color-border-disabled: var(--dnero-semantic-disabled-50);
+  --input-border-radius: 8px;
+  --color-label: var(--dnero-semantic-disabled-50);
+  --color-text: var(--dnero-semantic-disabled-80);
+  --color-placeholder: var(--dnero-semantic-disabled-50);
+  --color-disabled: var(--dnero-semantic-disabled-50);
+  --color-helper: var(--dnero-semantic-disabled-50);
+  --transition: 0.2s ease;
+  --font-size-input: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
+  --font-size-label: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
+  --font-size-label-small: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px);
+  --dnero-text-area-height: 90px;
+  --dnero-input-width: 334px;
+  --dnero-help-text-left-padding: 8px;
+  --dnero-help-text-margin: 5px;
+  /* Radio Buttons */
+  --radio-size: 22px;
+  --radio-border: var(--dnero-s);
+  --radio-color: var(--dnero-primary-60);
+  --radio-hover: var(--dnero-primary-60);
+  --radio-active: var(--dnero-primary-80);
+  --radio-disabled: var(--dnero-semantic-disabled-80);
+  --radio-bg-disabled: var(--dnero-semantic-disabled-10);
+  --radio-shadow-hover: var(--dnero-primary-10);
 }

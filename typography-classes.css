@@ -1,282 +1,173 @@
 /* ---------- HEADINGS ---------- */
-/* H1 */
+
+/* -----------------------------------------
+   DEFAULT FONT SIZES (Laptop base)
+----------------------------------------- */
+:root {
+  --font-h1: calc(var(--dnero-laptop-web-sizes-h1) * 1px);
+  --font-h2: calc(var(--dnero-laptop-web-sizes-h2) * 1px);
+  --font-h3: calc(var(--dnero-laptop-web-sizes-h3) * 1px);
+  --font-h4: calc(var(--dnero-laptop-web-sizes-h4) * 1px);
+  --font-h5: calc(var(--dnero-laptop-web-sizes-h5) * 1px);
+  --font-h6: calc(var(--dnero-laptop-web-sizes-h6) * 1px);
+  --font-h7: calc(var(--dnero-laptop-web-sizes-h7) * 1px);
+
+  --font-body-1: calc(var(--dnero-laptop-web-sizes-body-1) * 1px);
+  --font-body-2: calc(var(--dnero-laptop-web-sizes-body-2) * 1px);
+  --font-body-3: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
+
+  --font-caption-1: calc(var(--dnero-laptop-web-sizes-caption-1) * 1px);
+  --font-caption-2: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px);
+}
+
+/* -----------------------------------------
+   4K SCREENS
+----------------------------------------- */
+@media (min-width: var(--bp-4k)) {
+  :root {
+    --font-h1: calc(var(--dnero-4k-web-sizes-h1) * 1px);
+    --font-h2: calc(var(--dnero-4k-web-sizes-h2) * 1px);
+    --font-h3: calc(var(--dnero-4k-web-sizes-h3) * 1px);
+    --font-h4: calc(var(--dnero-4k-web-sizes-h4) * 1px);
+    --font-h5: calc(var(--dnero-4k-web-sizes-h5) * 1px);
+    --font-h6: calc(var(--dnero-4k-web-sizes-h6) * 1px);
+    --font-h7: calc(var(--dnero-4k-web-sizes-h7) * 1px);
+
+    --font-body-1: calc(var(--dnero-4k-web-sizes-body-1) * 1px);
+    --font-body-2: calc(var(--dnero-4k-web-sizes-body-2) * 1px);
+    --font-body-3: calc(var(--dnero-4k-web-sizes-body-3) * 1px);
+
+    --font-caption-1: calc(var(--dnero-4k-web-sizes-caption-1) * 1px);
+    --font-caption-2: calc(var(--dnero-4k-web-sizes-caption-2) * 1px);
+  }
+}
+
+/* -----------------------------------------
+   TABLET HORIZONTAL
+----------------------------------------- */
+@media (max-width: var(--bp-tablet-horizontal)) {
+  :root {
+    --font-h1: calc(var(--dnero-tablet-web-sizes-h1) * 1px);
+    --font-h2: calc(var(--dnero-tablet-web-sizes-h2) * 1px);
+    --font-h3: calc(var(--dnero-tablet-web-sizes-h3) * 1px);
+    --font-h4: calc(var(--dnero-tablet-web-sizes-h4) * 1px);
+    --font-h5: calc(var(--dnero-tablet-web-sizes-h5) * 1px);
+    --font-h6: calc(var(--dnero-tablet-web-sizes-h6) * 1px);
+    --font-h7: calc(var(--dnero-tablet-web-sizes-h7) * 1px);
+
+    --font-body-1: calc(var(--dnero-tablet-web-sizes-body-1) * 1px);
+    --font-body-2: calc(var(--dnero-tablet-web-sizes-body-2) * 1px);
+    --font-body-3: calc(var(--dnero-tablet-web-sizes-body-3) * 1px);
+
+    --font-caption-1: calc(var(--dnero-tablet-web-sizes-caption-1) * 1px);
+    --font-caption-2: calc(var(--dnero-tablet-web-sizes-caption-2) * 1px);
+  }
+}
+
+/* -----------------------------------------
+   SMARTPHONE
+----------------------------------------- */
+@media (max-width: var(--bp-smartphone)) {
+  :root {
+    --font-h1: calc(var(--dnero-mobile-web-sizes-h1) * 1px);
+    --font-h2: calc(var(--dnero-mobile-web-sizes-h2) * 1px);
+    --font-h3: calc(var(--dnero-mobile-web-sizes-h3) * 1px);
+    --font-h4: calc(var(--dnero-mobile-web-sizes-h4) * 1px);
+    --font-h5: calc(var(--dnero-mobile-web-sizes-h5) * 1px);
+    --font-h6: calc(var(--dnero-mobile-web-sizes-h6) * 1px);
+    --font-h7: calc(var(--dnero-mobile-web-sizes-h7) * 1px);
+
+    --font-body-1: calc(var(--dnero-mobile-web-sizes-body-1) * 1px);
+    --font-body-2: calc(var(--dnero-mobile-web-sizes-body-2) * 1px);
+    --font-body-3: calc(var(--dnero-mobile-web-sizes-body-3) * 1px);
+
+    --font-caption-1: calc(var(--dnero-mobile-web-sizes-caption-1) * 1px);
+    --font-caption-2: calc(var(--dnero-mobile-web-sizes-caption-2) * 1px);
+  }
+}
+
+/* -----------------------------------------
+   HEADINGS
+----------------------------------------- */
 .h1, h1 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h1) * 1px) !important;
+  font-size: var(--font-h1) !important;
   line-height: normal !important;
   margin: 0 !important;
 }
 
-@media (min-width: 2560px) {
-  .h1, h1 { font-size: calc(var(--dnero-4k-web-sizes-h1) * 1px) !important; }
-}
+.h2, h2 { font-size: var(--font-h2) !important; }
+.h3, h3 { font-size: var(--font-h3) !important; }
+.h4, h4 { font-size: var(--font-h4) !important; }
+.h5, h5 { font-size: var(--font-h5) !important; }
+.h6, h6 { font-size: var(--font-h6) !important; }
+.h7, h7 { font-size: var(--font-h7) !important; }
 
-@media (max-width: 1280px) {
-  .h1, h1 { font-size: calc(var(--dnero-tablet-web-sizes-h1) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h1, h1 { font-size: calc(var(--dnero-mobile-web-sizes-h1) * 1px) !important; }
-}
-
-/* H2 */
-.h2, h2 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h2) * 1px) !important;
-  line-height: normal !important;
-  margin: 0 !important;
-}
-
-@media (min-width: 2560px) {
-  .h2, h2 { font-size: calc(var(--dnero-4k-web-sizes-h2) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h2, h2 { font-size: calc(var(--dnero-tablet-web-sizes-h2) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h2, h2 { font-size: calc(var(--dnero-mobile-web-sizes-h2) * 1px) !important; }
-}
-
-/* H3 */
-.h3, h3 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h3) * 1px) !important;
-  line-height: normal !important;
-}
-
-@media (min-width: 2560px) {
-  .h3, h3 { font-size: calc(var(--dnero-4k-web-sizes-h3) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h3, h3 { font-size: calc(var(--dnero-tablet-web-sizes-h3) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h3, h3 { font-size: calc(var(--dnero-mobile-web-sizes-h3) * 1px) !important; }
-}
-
-/* H4 */
-.h4, h4 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h4) * 1px) !important;
-  line-height: normal !important;
-}
-
-@media (min-width: 2560px) {
-  .h4, h4 { font-size: calc(var(--dnero-4k-web-sizes-h4) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h4, h4 { font-size: calc(var(--dnero-tablet-web-sizes-h4) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h4, h4 { font-size: calc(var(--dnero-mobile-web-sizes-h4) * 1px) !important; }
-}
-
-/* H5 */
-.h5, h5 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h5) * 1px) !important;
-  line-height: normal !important;
-}
-
-@media (min-width: 2560px) {
-  .h5, h5 { font-size: calc(var(--dnero-4k-web-sizes-h5) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h5, h5 { font-size: calc(var(--dnero-tablet-web-sizes-h5) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h5, h5 { font-size: calc(var(--dnero-mobile-web-sizes-h5) * 1px) !important; }
-}
-
-/* H6 */
-.h6, h6 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h6) * 1px) !important;
-  line-height: normal !important;
-}
-
-@media (min-width: 2560px) {
-  .h6, h6 { font-size: calc(var(--dnero-4k-web-sizes-h6) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h6, h6 { font-size: calc(var(--dnero-tablet-web-sizes-h6) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h6, h6 { font-size: calc(var(--dnero-mobile-web-sizes-h6) * 1px) !important; }
-}
-
-/* H7 */
-.h7, h7 {
-  font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-h7) * 1px) !important;
-  line-height: normal !important;
-}
-
-@media (min-width: 2560px) {
-  .h7, h7 { font-size: calc(var(--dnero-4k-web-sizes-h7) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .h7, h7 { font-size: calc(var(--dnero-tablet-web-sizes-h7) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .h7, h7 { font-size: calc(var(--dnero-mobile-web-sizes-h7) * 1px) !important; }
-}
-
-/* ---------- BODY ---------- */
-
+/* -----------------------------------------
+   BODY TEXT
+----------------------------------------- */
 .body-1 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-body-1) * 1px) !important;
+  font-size: var(--font-body-1) !important;
   line-height: normal !important;
 }
-
-@media (min-width: 2560px) {
-  .body-1 { font-size: calc(var(--dnero-4k-web-sizes-body-1) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .body-1 { font-size: calc(var(--dnero-tablet-web-sizes-body-1) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .body-1 { font-size: calc(var(--dnero-mobile-web-sizes-body-1) * 1px) !important; }
-}
-
 .body-2 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-body-2) * 1px) !important;
+  font-size: var(--font-body-2) !important;
   line-height: normal !important;
 }
-
-@media (min-width: 2560px) {
-  .body-2 { font-size: calc(var(--dnero-4k-web-sizes-body-2) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .body-2 { font-size: calc(var(--dnero-tablet-web-sizes-body-2) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .body-2 { font-size: calc(var(--dnero-mobile-web-sizes-body-2) * 1px) !important; }
-}
-
 .body-3 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-body-3) * 1px) !important;
+  font-size: var(--font-body-3) !important;
   line-height: normal !important;
 }
 
-@media (min-width: 2560px) {
-  .body-3 { font-size: calc(var(--dnero-4k-web-sizes-body-3) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .body-3 { font-size: calc(var(--dnero-tablet-web-sizes-body-3) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .body-3 { font-size: calc(var(--dnero-mobile-web-sizes-body-3) * 1px) !important; }
-}
-
-/* ---------- CAPTIONS ---------- */
-
+/* -----------------------------------------
+   CAPTIONS
+----------------------------------------- */
 .caption-1 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-caption-1) * 1px) !important;
+  font-size: var(--font-caption-1) !important;
   line-height: normal !important;
 }
-
-@media (min-width: 2560px) {
-  .caption-1 { font-size: calc(var(--dnero-4k-web-sizes-caption-1) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .caption-1 { font-size: calc(var(--dnero-tablet-web-sizes-caption-1) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .caption-1 { font-size: calc(var(--dnero-mobile-web-sizes-caption-1) * 1px) !important; }
-}
-
 .caption-2 {
   font-family: var(--dnero-laptop-sans-serif), sans-serif !important;
-  font-size: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px) !important;
+  font-size: var(--font-caption-2) !important;
   line-height: normal !important;
 }
 
-@media (min-width: 2560px) {
-  .caption-2 { font-size: calc(var(--dnero-4k-web-sizes-caption-2) * 1px) !important; }
-}
-
-@media (max-width: 1280px) {
-  .caption-2 { font-size: calc(var(--dnero-tablet-web-sizes-caption-2) * 1px) !important; }
-}
-
-@media (max-width: 768px) {
-  .caption-2 { font-size: calc(var(--dnero-mobile-web-sizes-caption-2) * 1px) !important; }
-}
-
-/* ---------- BUTTONS ---------- */
-
+/* -----------------------------------------
+   BUTTONS
+----------------------------------------- */
 .btn-text-l {
   font-family: var(--dnero-laptop-sans-serif) !important;
   font-weight: var(--dnero-laptop-weight-bold) !important;
-  font-size: var(--dnero-laptop-web-sizes-body-2) !important;
+  font-size: var(--font-body-2) !important;
   line-height: normal !important;
 }
 
 .btn-text-m {
   font-family: var(--dnero-laptop-sans-serif) !important;
   font-weight: var(--dnero-laptop-weight-bold) !important;
-  font-size: var(--dnero-laptop-web-sizes-body-3) !important;
+  font-size: var(--font-body-3) !important;
   line-height: normal !important;
 }
 
 .btn-text-s {
   font-family: var(--dnero-laptop-sans-serif) !important;
   font-weight: var(--dnero-laptop-weight-bold) !important;
-  font-size: var(--dnero-laptop-web-sizes-caption-1) !important;
+  font-size: var(--font-caption-1) !important;
   line-height: normal !important;
 }
 
-/* ---------- FONT WEIGHT ---------- */
+/* -----------------------------------------
+   FONT WEIGHT & STYLE UTILITIES
+----------------------------------------- */
+.fw-light     { font-weight: var(--dnero-laptop-weight-light) !important; }
+.fw-regular   { font-weight: var(--dnero-laptop-weight-regular) !important; }
+.fw-medium    { font-weight: var(--dnero-laptop-weight-medium) !important; }
+.fw-semibold  { font-weight: var(--dnero-laptop-weight-semi-bold) !important; }
+.fw-bold      { font-weight: var(--dnero-laptop-weight-bold) !important; }
 
-.fw-light {
-  font-weight: var(--dnero-laptop-weight-light) !important;
-}
-
-.fw-regular {
-  font-weight: var(--dnero-laptop-weight-regular) !important;
-}
-
-.fw-medium {
-  font-weight: var(--dnero-laptop-weight-medium) !important;
-}
-
-.fw-semibold {
-  font-weight: var(--dnero-laptop-weight-semi-bold) !important;
-}
-
-.fw-bold {
-  font-weight: var(--dnero-laptop-weight-bold) !important;
-}
-
-.italic {
-  font-style: italic !important;
-}
-
-.uppercase {
-  text-transform: uppercase !important;
-}
+.italic { font-style: italic !important; }
+.uppercase { text-transform: uppercase !important; }
