@@ -5,17 +5,10 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0.5rem 2.5rem;
+  padding: 0rem 2.5rem;
   background: transparent; /* sin color al inicio */
   backdrop-filter: none; /* sin blur */
   -webkit-backdrop-filter: none;
   border-bottom: none;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
-}
-
-/* Mobile Media Query */
-@media (max-width: 768px) {
-  #nav-section {
-   /* height: 6.9rem; */
-  }
 }
