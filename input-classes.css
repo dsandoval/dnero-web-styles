@@ -558,3 +558,69 @@ input[type="search"]::-webkit-search-results-decoration {
 .input-field.phone .dropdown-item:hover {
   background: var(--dnero-primary-10);
 }
+
+/* ====== VARIANTE AZUL ====== */
+/* Se aplica solo dentro de .input-section-blue */
+.input-section-blue .input-field input,
+.input-section-blue .input-field textarea,
+.input-section-blue .input-field select {
+  background: transparent;
+  border-color: var(--dnero-semantic-disabled-10);
+  color: var(--dnero-semantic-disabled-10);
+}
+
+.input-section-blue .input-field label {
+  color: var(--dnero-semantic-disabled-10);
+}
+
+/* Placeholder */
+.input-section-blue .input-field input::placeholder,
+.input-section-blue .input-field textarea::placeholder {
+  color: var(--dnero-semantic-disabled-10);
+  opacity: 1;
+}
+
+/* Focus */
+.input-section-blue .input-field input:focus,
+.input-section-blue .input-field textarea:focus,
+.input-section-blue .input-field select:focus {
+  border-color: var(--dnero-semantic-disabled-10);
+}
+
+.input-section-blue .input-field input:focus ~ label,
+.input-section-blue .input-field textarea:focus ~ label,
+.input-section-blue .input-field select:focus ~ label {
+  color: var(--dnero-semantic-disabled-10);
+}
+
+/* Helper text */
+.input-section-blue .input-field .helper-text {
+  color: var(--dnero-semantic-disabled-10);
+}
+
+/* Dropdown y elementos internos */
+.input-section-blue .input-field.dropdown .dropdown-menu,
+.input-section-blue .input-field.phone .dropdown-menu {
+  background: transparent;
+  border: 1px solid var(--dnero-semantic-disabled-10);
+}
+
+/* .input-section-blue .dropdown-item,
+.input-section-blue .checkbox-menu .btn-text-m {
+  color: var(--dnero-semantic-disabled-10);
+}
+
+.input-section-blue .dropdown-item:hover,
+.input-section-blue .dropdown-item.selected {
+  background: rgba(255, 255, 255, 0.1);
+} */
+
+/* Variante teléfono */
+.input-section-blue .input-field.phone .phone-wrapper {
+  border-color: var(--dnero-semantic-disabled-10);
+}
+
+.input-section-blue .input-field.phone .country-button {
+  border-color: var(--dnero-semantic-disabled-10);
+  color: var(--dnero-semantic-disabled-10);
+}
