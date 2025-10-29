@@ -5,6 +5,7 @@
   flex-direction: column;
   margin: 20px 0;
   font-family: var(--dnero-laptop-sans-serif), sans serif;
+  width: var(--dnero-input-width);
 }
 
 /* Input base */
@@ -515,6 +516,16 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 10px !important;
   color: var(--color-border-focus);
   left: 78px;
+}
+
+/* ===== Variante estática del input de teléfono ===== */
+.input-field.phone.phone-static label {
+  left: 58px;
+}
+
+.input-field.phone.phone-static input:focus ~ label,
+.input-field.phone.phone-static input:not(:placeholder-shown) ~ label {
+  left: 58px;
 }
 
 /* Dropdown */
