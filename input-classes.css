@@ -574,10 +574,19 @@ input[type="search"]::-webkit-search-results-decoration {
   background: transparent;
 }
 
-/* Placeholder siempre visible y del color asignado */
+/* Placeholder invisible por defecto */
 .input-section-blue .input-field input::placeholder,
 .input-section-blue .input-field textarea::placeholder {
   color: var(--dnero-semantic-disabled-10);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+/* Placeholder visible en focus o activo */
+.input-section-blue .input-field input:focus::placeholder,
+.input-section-blue .input-field input:not(:placeholder-shown)::placeholder,
+.input-section-blue .input-field textarea:focus::placeholder,
+.input-section-blue .input-field textarea:not(:placeholder-shown)::placeholder {
   opacity: 1;
 }
 
@@ -599,7 +608,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background: transparent;
 }
 
-/* Helper text (mantiene color en focus o activo) */
+/* Helper text siempre visible con el mismo color */
 .input-section-blue .input-field .helper-text {
   color: var(--dnero-semantic-disabled-10);
 }
@@ -613,18 +622,19 @@ input[type="search"]::-webkit-search-results-decoration {
 /* ===== Dropdown ===== */
 .input-section-blue .input-field.dropdown .dropdown-menu,
 .input-section-blue .input-field.phone .dropdown-menu {
-  background: transparent;
+  background: var(--dnero-background-white);
   border: 1px solid var(--dnero-semantic-disabled-10);
 }
 
 .input-section-blue .dropdown-item,
 .input-section-blue .checkbox-menu .btn-text-m {
   color: var(--dnero-semantic-disabled-10);
+  transition: background var(--transition);
 }
 
 .input-section-blue .dropdown-item:hover,
 .input-section-blue .dropdown-item.selected {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dnero-blue-10);
 }
 
 /* ===== Variante teléfono ===== */
@@ -637,6 +647,11 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--dnero-semantic-disabled-10);
 }
 
+/* Flecha en color del token */
+.input-section-blue .input-field.phone .country-button .arrow {
+  color: var(--dnero-semantic-disabled-10);
+}
+
 /* ===== Search Input ===== */
 .input-section-blue .input-field.search input[type="search"] {
   border-color: var(--dnero-semantic-disabled-10);
@@ -645,18 +660,12 @@ input[type="search"]::-webkit-search-results-decoration {
   background-size: 16px;
 }
 
-/* Search label y botón X */
 .input-section-blue .input-field.search label {
   color: var(--dnero-semantic-disabled-10);
   background: transparent;
 }
 
 .input-section-blue .input-field.search .clear-btn {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M8.93996 8.645L11.8066 5.785C11.9322 5.65946 12.0027 5.4892 12.0027 5.31167C12.0027 5.13413 11.9322 4.96387 11.8066 4.83833C11.6811 4.7128 11.5108 4.64227 11.3333 4.64227C11.1558 4.64227 10.9855 4.7128 10.86 4.83833L7.99996 7.705L5.13996 4.83833C5.01442 4.7128 4.84416 4.64227 4.66663 4.64227C4.48909 4.64227 4.31883 4.7128 4.19329 4.83833C4.06776 4.96387 3.99723 5.13413 3.99723 5.31167C3.99723 5.4892 4.06776 5.65946 4.19329 5.785L7.05996 8.645L4.19329 11.505C4.13081 11.567 4.08121 11.6407 4.04737 11.7219C4.01352 11.8032 3.99609 11.8903 3.99609 11.9783C3.99609 12.0663 4.01352 12.1535 4.04737 12.2347C4.08121 12.316 4.13081 12.3897 4.19329 12.4517C4.25527 12.5142 4.329 12.5637 4.41024 12.5976C4.49148 12.6314 4.57862 12.6489 4.66663 12.6489C4.75463 12.6489 4.84177 12.6314 4.92301 12.5976C5.00425 12.5637 5.07798 12.5142 5.13996 12.4517L7.99996 9.585L10.86 12.4517C10.9219 12.5142 10.9957 12.5637 11.0769 12.5976C11.1581 12.6314 11.2453 12.6489 11.3333 12.6489C11.4213 12.6489 11.5084 12.6314 11.5897 12.5976C11.6709 12.5637 11.7447 12.5142 11.8066 12.4517C11.8691 12.3897 11.9187 12.316 11.9526 12.2347C11.9864 12.1535 12.0038 12.0663 12.0038 11.9783C12.0038 11.8903 11.9864 11.8032 11.9526 11.7219C11.9187 11.6407 11.8691 11.567 11.8066 11.505L8.93996 8.645Z' fill='%23AEB3C1'/%3E%3C/svg%3E");
   opacity: 0.6;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(6%) saturate(308%) hue-rotate(181deg) brightness(95%) contrast(89%);
 }
-
-.input-section-blue .input-field.search input[type="search"]:focus {
-  border-color: var(--dnero-semantic-disabled-10);
-}
-
