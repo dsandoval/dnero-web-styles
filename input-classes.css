@@ -628,7 +628,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .input-section-blue .dropdown-item,
 .input-section-blue .checkbox-menu .btn-text-m {
-  color: var(--dnero-semantic-disabled-10);
+  color: var(--dnero-black);
   transition: background var(--transition);
 }
 
