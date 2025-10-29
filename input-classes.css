@@ -520,12 +520,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* ===== Variante estática del input de teléfono ===== */
 .input-field.phone.phone-static label {
-  left: 58px;
+  left: 62px;
 }
 
 .input-field.phone.phone-static input:focus ~ label,
 .input-field.phone.phone-static input:not(:placeholder-shown) ~ label {
-  left: 58px;
+  left: 62px;
 }
 
 /* Dropdown */
