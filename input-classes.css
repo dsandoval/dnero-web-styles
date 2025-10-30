@@ -608,6 +608,10 @@ input[type="search"]::-webkit-search-results-decoration {
   border-color: var(--dnero-semantic-disabled-10);
 }
 
+.input-section-blue .input-field.phone input[type="tel"] {
+  color: var(--dnero-semantic-disabled-10);
+}
+
 /* Label focus */
 .input-section-blue .input-field input:focus ~ label,
 .input-section-blue .input-field input:not(:placeholder-shown) ~ label,
