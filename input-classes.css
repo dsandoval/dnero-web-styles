@@ -40,6 +40,13 @@
   transition: all var(--transition);
 }
 
+.input-field input,
+.input-field select,
+.input-field textarea {
+  padding-top: calc(var(--dnero-m) + 5px); /* agrega 5px hacia abajo */
+  line-height: calc(var(--dnero-input-height) - 5px);
+}
+
 /* Placeholder */
 .input-field input::placeholder,
 .input-field textarea::placeholder {
