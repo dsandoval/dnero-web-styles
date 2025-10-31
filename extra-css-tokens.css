@@ -49,4 +49,10 @@
   --radio-disabled: var(--dnero-semantic-disabled-80);
   --radio-bg-disabled: var(--dnero-semantic-disabled-10);
   --radio-shadow-hover: var(--dnero-primary-10);
+
+  /* Waitlist Form */
+
+  --form-max-width-desktop: 480px;
+  --form-max-width-mobile: 100%;
+  --margin-bottom-desktop: 72px;
 }
