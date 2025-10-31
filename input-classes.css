@@ -691,3 +691,19 @@ input[type="search"]::-webkit-search-results-decoration {
   opacity: 0.6;
   filter: brightness(0) saturate(100%) invert(73%) sepia(6%) saturate(308%) hue-rotate(181deg) brightness(95%) contrast(89%);
 }
+
+/* === Estado Error visible dentro de secciones azules === */
+.input-section-blue .input-field.error input,
+.input-section-blue .input-field.error textarea,
+.input-section-blue .input-field.error select,
+.input-section-blue .input-field.phone.error .phone-wrapper {
+  border-color: var(--color-border-error) !important;
+}
+
+.input-section-blue .input-field.error label {
+  color: var(--color-border-error) !important;
+}
+
+.input-section-blue .input-field.phone.error .country-button {
+  border-color: var(--color-border-error) !important;
+}
