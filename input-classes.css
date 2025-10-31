@@ -121,6 +121,10 @@
   padding-left: var(--dnero-help-text-left-padding);
 }
 
+.input-field.error .helper-text {
+  color: var(--color-border-error) !important;
+}
+
 /* ===== Dropdown base ===== */
 .dropdown-menu {
   position: absolute;
@@ -639,6 +643,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .input-section-blue .input-field textarea:focus ~ .helper-text,
 .input-section-blue .input-field textarea:not(:placeholder-shown) ~ .helper-text {
   color: var(--dnero-semantic-disabled-10);
+}
+
+.input-section-blue .input-field.error .helper-text {
+  color: var(--color-border-error) !important;
 }
 
 /* ===== Dropdown ===== */
