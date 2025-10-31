@@ -215,7 +215,7 @@ input:disabled:active + .checkmark {
 /* Active (click sostenido) */
 .checkbox--green input:not(:disabled):active + .checkmark {
   background-color: var(--dnero-primary-100);
-  border-color: var(--dnero-primary-100);
+  border-color: var(--dnero-secondary-yellow-green);
   box-shadow: 0 0 0 6px var(--dnero-semantic-error-10);
 }
 
