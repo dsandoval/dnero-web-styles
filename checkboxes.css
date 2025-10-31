@@ -176,8 +176,8 @@ input:disabled:active + .checkmark {
   content: "";
   width: 10px;
   height: 5px;
-  border-left: 2px solid var(--dnero-neutral-white);
-  border-bottom: 2px solid var(--dnero-neutral-white);
+  border-left: 2px solid var(--dnero-background-blue);
+  border-bottom: 2px solid var(--dnero-background-blue);
   transform: rotate(-45deg) scale(0);
   transition: transform 0.2s ease;
 }
