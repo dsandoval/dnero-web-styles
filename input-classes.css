@@ -43,8 +43,12 @@
 .input-field input,
 .input-field select,
 .input-field textarea {
-  padding-top: calc(var(--dnero-m) + 5px); /* agrega 5px hacia abajo */
+  padding-top: calc(var(--dnero-m) + 10px);
   line-height: calc(var(--dnero-input-height) - 5px);
+}
+
+.input-field.phone input[type="tel"] {
+  padding-top: 10px;
 }
 
 /* Placeholder */
