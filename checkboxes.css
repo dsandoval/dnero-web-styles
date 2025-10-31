@@ -204,7 +204,7 @@ input:disabled:active + .checkmark {
 /* Hover */
 .checkbox--green input:not(:disabled) + .checkmark:hover {
   box-shadow: 0 0 0 6px var(--dnero-semantic-error-10);
-  border-color: var(--dnero-semantic-error-50);
+  border-color: var(--dnero-secondary-yellow-green);
 }
 
 /* Hover cuando está checked */
@@ -214,8 +214,8 @@ input:disabled:active + .checkmark {
 
 /* Active (click sostenido) */
 .checkbox--green input:not(:disabled):active + .checkmark {
-  background-color: var(--dnero-semantic-error-90);
-  border-color: var(--dnero-semantic-error-90);
+  background-color: var(--dnero-primary-100);
+  border-color: var(--dnero-primary-100);
   box-shadow: 0 0 0 6px var(--dnero-semantic-error-10);
 }
 
