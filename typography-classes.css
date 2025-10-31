@@ -24,7 +24,7 @@
    4K SCREENS
 ----------------------------------------- */
 @media (min-width: 2400px) {
-  :root {
+  html {
     --font-h1: calc(var(--dnero-4k-web-sizes-h1) * 1px);
     --font-h2: calc(var(--dnero-4k-web-sizes-h2) * 1px);
     --font-h3: calc(var(--dnero-4k-web-sizes-h3) * 1px);
@@ -46,7 +46,7 @@
    TABLET HORIZONTAL
 ----------------------------------------- */
 @media (max-width: 1280px) {
-  :root {
+  html {
     --font-h1: calc(var(--dnero-tablet-web-sizes-h1) * 1px);
     --font-h2: calc(var(--dnero-tablet-web-sizes-h2) * 1px);
     --font-h3: calc(var(--dnero-tablet-web-sizes-h3) * 1px);
@@ -68,7 +68,7 @@
    SMARTPHONE
 ----------------------------------------- */
 @media (max-width: 768px) {
-  :root {
+  html {
     --font-h1: calc(var(--dnero-mobile-web-sizes-h1) * 1px);
     --font-h2: calc(var(--dnero-mobile-web-sizes-h2) * 1px);
     --font-h3: calc(var(--dnero-mobile-web-sizes-h3) * 1px);
@@ -172,26 +172,12 @@
 .italic { font-style: italic !important; }
 .uppercase { text-transform: uppercase !important; }
 
-.blue-text {
-  color: var(--dnero-primary-60) !important;
-}
-
-.white-text {
-  color: var(--dnero-neutral-white) !important;
-}
-
-.light-text {
-  color: var(--dnero-semantic-disabled-10) !important;
-}
-
-.dark-text {
-  color: #21272A !important;
-}
-
-.green-text {
-  color: var(--dnero-secondary-yellow-green) !important;
-}
-
-.black-text {
-  color: var(--dnero-black) !important;
-}
+/* -----------------------------------------
+   COLORS
+----------------------------------------- */
+.blue-text  { color: var(--dnero-primary-60) !important; }
+.white-text { color: var(--dnero-neutral-white) !important; }
+.light-text { color: var(--dnero-semantic-disabled-10) !important; }
+.dark-text  { color: #21272A !important; }
+.green-text { color: var(--dnero-secondary-yellow-green) !important; }
+.black-text { color: var(--dnero-black) !important; }
