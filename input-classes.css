@@ -47,10 +47,6 @@
   line-height: calc(var(--dnero-input-height) - 5px);
 }
 
-.input-field.phone input[type="tel"] {
-  padding-top: 10px;
-}
-
 /* Placeholder */
 .input-field input::placeholder,
 .input-field textarea::placeholder {
@@ -507,7 +503,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   outline: none;
   height: 100%;
-  padding: 0 12px;
+  padding: 10px 0 0 12px;
   background: transparent;
   color: var(--color-text);
   font-size: var(--font-size-input);
