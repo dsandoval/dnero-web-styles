@@ -84,6 +84,7 @@
 .fw-bold      { font-weight: var(--dnero-laptop-weight-bold) !important; }
 
 .italic { font-style: italic !important; }
+.normal-text { font-style: normal !important; }
 .uppercase { text-transform: uppercase !important; }
 
 /* -----------------------------------------
