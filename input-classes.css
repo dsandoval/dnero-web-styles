@@ -716,7 +716,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border-color: var(--color-border-error) !important;
 }
 
-/* Evita el fondo del autocompletado en Chrome, Safari y Edge */
+/* ==== Fix total autofill (color de borde + texto + fondo) ==== */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -726,19 +726,29 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: var(--dnero-x-s) solid var(--color-border-default) !important;
-  -webkit-text-fill-color: var(--color-text) !important;
+  /* Mantiene tus estilos originales */
+  border: var(--dnero-x-s) solid var(--dnero-semantic-disabled-10) !important;
+  -webkit-text-fill-color: var(--dnero-semantic-disabled-10) !important;
+
+  /* Elimina el fondo amarillo del navegador */
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
   box-shadow: 0 0 0px 1000px transparent inset !important;
-  transition: background-color 5000s ease-in-out 0s;
+
+  /* Evita que reaparezca el fondo en animaciones */
+  transition: background-color 9999s ease-in-out 0s !important;
+
+  /* Corrige borde y background */
   background-color: transparent !important;
+  caret-color: var(--dnero-semantic-disabled-10) !important;
 }
 
-.input-section-blue input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+/* Aplica también a la sección azul para mantener consistencia */
+.input-section-blue input:-webkit-autofill,
+.input-section-blue input:-webkit-autofill:hover,
+.input-section-blue input:-webkit-autofill:focus {
+  border-color: var(--dnero-semantic-disabled-10) !important;
   -webkit-text-fill-color: var(--dnero-semantic-disabled-10) !important;
-}
-
-input:-webkit-autofill {
-  filter: none !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  background: transparent !important;
 }
