@@ -1,5 +1,5 @@
 #nav-section {
-  height: 6.9rem;
+  height: 95px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,4 +11,18 @@
   -webkit-backdrop-filter: none;
   border-bottom: none;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #nav-section {
+    height: 86px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+  #nav-section {
+    height: 70px;
+  }
 }
