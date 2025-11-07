@@ -733,3 +733,12 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   background-color: transparent !important;
 }
+
+.input-section-blue input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--dnero-semantic-disabled-10) !important;
+}
+
+input:-webkit-autofill {
+  filter: none !important;
+}
