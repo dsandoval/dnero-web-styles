@@ -715,3 +715,21 @@ input[type="search"]::-webkit-search-results-decoration {
 .input-section-blue .input-field.phone.error .country-button {
   border-color: var(--color-border-error) !important;
 }
+
+/* Evita el fondo del autocompletado en Chrome, Safari y Edge */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: var(--dnero-x-s) solid var(--color-border-default) !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+}
