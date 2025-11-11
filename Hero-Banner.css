@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .title-hero{
+    max-width: 321px;
+  }
+}
