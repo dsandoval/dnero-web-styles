@@ -50,7 +50,7 @@
 }
 
 .input-field {
-  margin: 10px 0 !important;
+  margin: 0 0 16px 0 !important;
   width: var(--form-max-width-desktop) !important;
 }
 
@@ -80,10 +80,18 @@
   align-items: center;
   gap: 12px;
   max-width: var(--form-max-width-desktop);
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .line-height-100 {
   line-height: 100%;
+}
+
+@media (min-width: 1281px) and (max-width: 2399px) {
+  .form-title {
+    margin-bottom: 28px !important;
+  }
 }
 
 @media (max-width: 768px) {
