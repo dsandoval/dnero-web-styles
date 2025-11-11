@@ -3,7 +3,7 @@
     display: block !important;
   }
 
-  .title-hero{
-    max-width: 321px;
+  .title-Hero{
+    max-width: 321px !important;
   }
 }
