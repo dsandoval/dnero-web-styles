@@ -154,3 +154,8 @@
   .caption-1 { font-size: calc(var(--dnero-mobile-web-sizes-caption-1) * 1px) !important; }
   .caption-2 { font-size: calc(var(--dnero-mobile-web-sizes-caption-2) * 1px) !important; }
 }
+
+/* Change Elementor's line-height */
+body, h1, h2, h3, h4, h5, h6, p, span {
+  line-height: 1.2 !important;
+}
