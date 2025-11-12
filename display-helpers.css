@@ -8,6 +8,16 @@
   }
 }
 
+/* --- Mostrar solo en mobile (smartphones) y tablets --- */
+.mobile-tablet-only {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .mobile-tablet-only {
+    display: block !important;
+  }
+}
+
 /* --- Mostrar solo en tablet vertical (hasta 1024px) --- */
 .tablet-vertical-only {
   display: none;
