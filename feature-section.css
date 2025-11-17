@@ -4,10 +4,17 @@
     }
 }
 /* iPhone 12 / 12 Pro y similares (hasta 390px) */
+@media (max-width: 393px) {
+  .waitlist-background {
+      background-size: cover !important;
+      background-position: -455px 0px !important;
+  }
+}
+/* iPhone 12 / 12 Pro y similares (hasta 390px) */
 @media (max-width: 390px) {
   .waitlist-background {
       background-size: cover !important;
-      background-position: -530px 0px !important;
+      background-position: -450px 0px !important;
   }
 }
 
@@ -15,6 +22,6 @@
 @media (max-width: 375px) {
   .waitlist-background {
       background-size: cover !important;
-      background-position: -542px 0px !important;
+      background-position: -474px 0px !important;
   }
 }
