@@ -7,7 +7,7 @@
 @media (max-width: 390px) {
   .waitlist-background {
       background-size: cover !important;
-    background-position: -462px 0px !important;
+      background-position: -530px 0px !important;
   }
 }
 
@@ -15,6 +15,6 @@
 @media (max-width: 375px) {
   .waitlist-background {
       background-size: cover !important;
-    background-position: -474px 0px !important;
+      background-position: -542px 0px !important;
   }
 }
