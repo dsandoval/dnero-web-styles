@@ -1,27 +1,33 @@
+@media (max-width: 767px) {
+  .elementor-icon-list-icon {
+    padding-top: 3px;
+  }
+}
+
 @media (max-width: 430px) {
-    .waitlist-background {
-        background-size: cover !important;
-    }
+  .waitlist-background {
+    background-size: cover !important;
+  }
 }
 /* iPhone 12 / 12 Pro y similares (hasta 390px) */
 @media (max-width: 393px) {
   .waitlist-background {
-      background-size: cover !important;
-      background-position: -455px 0px !important;
+    background-size: cover !important;
+    background-position: -455px 0px !important;
   }
 }
 /* iPhone 12 / 12 Pro y similares (hasta 390px) */
 @media (max-width: 390px) {
   .waitlist-background {
-      background-size: cover !important;
-      background-position: -450px 0px !important;
+    background-size: cover !important;
+    background-position: -450px 0px !important;
   }
 }
 
 /* iPhone SE y pantallas pequeñas (hasta 375px) */
 @media (max-width: 375px) {
   .waitlist-background {
-      background-size: cover !important;
-      background-position: -474px 0px !important;
+    background-size: cover !important;
+    background-position: -474px 0px !important;
   }
 }
