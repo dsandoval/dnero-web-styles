@@ -95,6 +95,10 @@
 }
 
 @media (max-width: 768px) {
+  .waitlist-form-container {
+    width: 100%;  
+    padding: 40px 15px;
+  }
   .waitlist-form {
     max-width: var(--form-max-width-mobile);
   }

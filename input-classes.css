@@ -13,7 +13,7 @@
 .input-field select,
 .input-field textarea {
   width: var(--dnero-input-width);
-  font-size: calc(var(--font-size-input) * 1px);
+  font-size: var(--font-size-input);
   padding: var(--dnero-m);
   border: var(--dnero-x-s) solid var(--color-border-default);
   border-radius: var(--input-border-radius);
@@ -483,7 +483,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .input-field.phone .country-button .flag {
-  font-size: 18px;
+  font-size: 21px;
   display: inline-block;
   width: 24px;
   text-align: center;
