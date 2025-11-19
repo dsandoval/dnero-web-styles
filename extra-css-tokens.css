@@ -33,9 +33,9 @@
   --color-disabled: var(--dnero-semantic-disabled-50);
   --color-helper: var(--dnero-semantic-disabled-50);
   --transition: 0.2s ease;
-  --font-size-input: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
-  --font-size-label: calc(var(--dnero-laptop-web-sizes-body-3) * 1px);
-  --font-size-label-small: calc(var(--dnero-laptop-web-sizes-caption-2) * 1px);
+  --font-size-input: calc(var(--dnero-desktop-web-sizes-body-3) * 1px);
+  --font-size-label: calc(var(--dnero-desktop-web-sizes-body-3) * 1px);
+  --font-size-label-small: calc(var(--dnero-desktop-web-sizes-caption-2) * 1px);
   --dnero-text-area-height: 90px;
   --dnero-input-width: 334px;
   --dnero-help-text-left-padding: 8px;
