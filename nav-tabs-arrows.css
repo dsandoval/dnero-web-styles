@@ -1,0 +1,101 @@
+
+
+.e-n-tabs.e-activated.dnero-tabs{
+  max-width:100%!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0 12px!important;
+  box-sizing:border-box!important;
+  overflow:visible!important;
+}
+
+.dnero-tabs .e-n-tabs-heading{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:40px;
+  background:var(--dnero-blue-100);
+  border-radius:100px;
+  overflow:visible!important;
+}
+
+.tab-scroll-button{
+  all:unset!important;
+  flex:0 0 40px!important;
+  width:40px!important;
+  height:40px!important;
+  border:2px solid var(--dnero-secondary-yellow-green)!important;
+  border-radius:50%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  cursor:pointer!important;
+  opacity:0;
+  pointer-events:none;
+  background:var(--dnero-blue-100)!important;
+  transition:opacity .3s ease!important;
+  z-index:10;
+}
+.tab-scroll-button.visible{opacity:1!important;pointer-events:all!important;}
+.tab-scroll-button svg{width:20px;height:20px;}
+
+.tab-buttons-wrapper{
+  flex:0 0 calc(100% - 80px)!important;
+  max-width:calc(100% - 80px)!important;
+  min-width:0;
+  height:100%;
+  display:flex!important;
+  overflow:hidden;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+}
+.tab-buttons-wrapper::-webkit-scrollbar{display:none!important;}
+
+.e-n-tab-title{
+  flex:0 0 calc(100% / 7)!important;
+  height:100%;
+    border: none !important;
+
+  padding:0 10px!important;
+  background:var(--dnero-blue-100)!important;
+  color:var(--dnero-secondary-yellow-green)!important;
+  font-weight:700;
+  font-family:Urbanist,sans-serif;
+  font-size:13.8px!important;
+  white-space:nowrap;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  transition:all .4s ease;
+  box-sizing:border-box;
+}
+.e-n-tab-title.active,
+.e-n-tab-title[aria-selected="true"]{
+  background:var(--dnero-secondary-yellow-green)!important;
+  color:var(--dnero-blue-100)!important;
+  border-radius:100px!important;
+  padding:0 12px!important;
+  z-index:2;
+}
+
+.tab-panel{
+  display:none;
+  padding:30px 20px;
+  background:#f9f9f9;
+  border-radius:16px;
+  margin-top:20px;
+}
+.tab-panel.active{display:block;}
+
+@media (max-width:600px){
+  .e-n-tabs-heading,
+  .tab-buttons-wrapper{height:44px!important;}
+  .e-n-tab-title{
+    flex:0 0 calc(100% / 3)!important;
+    padding:0 8px!important;
+    font-size:13px!important;
+  }
+}
+
+
