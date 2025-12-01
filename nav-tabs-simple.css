@@ -1,0 +1,77 @@
+/* Container */
+.dnero-tabs-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  font-family: Urbanist, sans-serif;
+}
+
+/* Tab bar */
+.dnero-tabs-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: var(--dnero-blue-100);
+  border-radius: 100px;
+  overflow: hidden;
+  gap: 0;
+}
+
+/* Tab item  */
+.dnero-tab {
+  flex: 0 0 calc(100% / 7);
+  height: 100%;
+  padding: 0 12px;
+  background: var(--dnero-blue-100);
+  color: var(--dnero-secondary-yellow-green);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Active tab – yellow pill */
+.dnero-tab.active {
+  background: var(--dnero-secondary-yellow-green) !important;
+  color: var(--dnero-blue-100) !important;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .dnero-tab { font-size: 13.5px; padding: 0 8px; }
+}
+
+/* Smaller tablets */
+@media (max-width: 768px) {
+  .dnero-tab { font-size: 13px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dnero-tabs-heading { height: 44px; }
+  .dnero-tab { font-size: 12.5px; }
+}
+
+/* Content panel  */
+.dnero-tab-content {
+  display: none;
+  padding: 30px 20px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+/* Active content */
+.dnero-tab-content.active {
+  display: block;
+}
