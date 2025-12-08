@@ -27,6 +27,13 @@ button.button[aria-disabled="true"] {
   opacity: 0.6;
 }
 
+/* Extra Large */
+.button--xl {
+  max-width: var(--dnero-button-xl-dimension-max) !important;
+  height: var(--dnero-button-l-height) !important;
+  padding: var(--dnero-button-L-padding) !important;
+}
+
 /* Large */
 .button--l {
   max-width: var(--dnero-button-l-dimension-max) !important;
