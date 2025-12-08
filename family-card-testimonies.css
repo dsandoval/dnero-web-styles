@@ -31,6 +31,21 @@
 }
 
 /* ========================================
+   TESTIMONIAL AVATAR
+   ======================================== */
+
+.testimonial-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  aspect-ratio: 1/1;
+}
+
+/* ========================================
    TESTIMONIAL CONTENT
    ======================================== */
 
@@ -57,6 +72,11 @@
 
 /* Content sin blur (para cards sin imagen) */
 .testimonial-content--no-blur {
+  height: 127px;
+  margin-bottom: 11px;
+  padding-top: 0;
+  padding-left: 12px;
+  padding-right: 0;
   color: var(--dnero-primary-blue, #4285F4);
   background: transparent;
 }
@@ -99,6 +119,10 @@
   display: flex;
   gap: 2px;
   color: var(--dnero-secondary-yellow);
+}
+
+.testimonial-card--with-bg .testimonial-stars {
+  padding-right: 20px;
 }
 
 .star {
