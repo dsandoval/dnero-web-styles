@@ -74,7 +74,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 4px 3px 27px 15px;
+  padding: 4px 15px 27px 15px;
   background-blend-mode: multiply;
   backdrop-filter: blur(4.4px);
   text-align: left;
