@@ -44,11 +44,19 @@
 }
 
 .hipo-tarjeta:nth-child(2) {
-  background-position: 35% center;
+  background-position: 75% center;
 }
 
 .hipo-tarjeta:nth-child(2):hover {
-  background-position: calc(35% - 1px) center;
+  background-position: calc(75% - 1px) center;
+}
+
+.hipo-tarjeta:nth-child(4) {
+  background-position: 30% center;
+}
+
+.hipo-tarjeta:nth-child(4):hover {
+  background-position: calc(30% - 1px) center;
 }
 
 .hipo-tarjeta-imagen {
@@ -66,13 +74,17 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 11px 3px 27px 15px;
-  padding-top: 0;
+  padding: 4px 3px 27px 15px;
   background-blend-mode: multiply;
   backdrop-filter: blur(4.4px);
   text-align: left;
   transition: max-height 0.5s ease;
   max-height: 100px;
+  justify-content: center;
+}
+
+.hipo-tarjeta-info1, .hipo-tarjeta-info3, .hipo-tarjeta-info4 {
+        padding-top: 24px;
 }
 
 .hipo-tarjeta-descripcion {
