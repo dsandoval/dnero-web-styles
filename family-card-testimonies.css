@@ -76,7 +76,7 @@
   margin-bottom: 11px;
   padding-top: 0;
   padding-left: 14px;
-  padding-right: 0;
+  padding-right: 12;
   color: var(--dnero-primary-blue, #4285F4);
   background: transparent;
 }
@@ -122,7 +122,7 @@
 }
 
 .testimonial-card--no-bg .testimonial-stars {
-  padding-right: 20px;
+  padding-right: 8px;
 }
 
 .star {
