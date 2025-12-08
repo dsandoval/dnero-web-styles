@@ -121,7 +121,7 @@
   color: var(--dnero-secondary-yellow);
 }
 
-.testimonial-card--with-bg .testimonial-stars {
+.testimonial-card--no-bg .testimonial-stars {
   padding-right: 20px;
 }
 
