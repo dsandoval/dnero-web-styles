@@ -18,7 +18,10 @@
 
 /* Card CON imagen de fondo */
 .testimonial-card--with-bg {
-  background: #FF6B00 url('/wp-content/uploads/2025/12/5863322b6ca805648ad14213aeaf9889a26c2676-scaled.avif') center/cover no-repeat;
+  background: var(--dnero-secondary-orange);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Card SIN imagen de fondo */
