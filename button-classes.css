@@ -305,3 +305,45 @@ button.button--tertiary-onblue[aria-disabled="true"] {
   border: none;
   background-color: transparent;
 }
+
+/* Boton Orange */
+.button--orange,
+a.button--orange,
+button.button--orange {
+  color: var(--dnero-secondary-orange) !important;
+  border: none;
+  background-color: transparent;
+}
+
+.button--orange:hover,
+a.button--orange:hover,
+button.button--orange:hover {
+  color: var(--dnero-semantic-error-50) !important;
+  border: none;
+  background-color: transparent;
+}
+
+.button--orange:active,
+a.button--orange:active,
+button.button--orange:active {
+  color: var(--dnero-semantic-error-50) !important;
+  border: none;
+  background-color: transparent;
+}
+
+.button--orange:focus,
+a.button--orange:focus,
+button.button--orange:focus {
+  color: var(--dnero-semantic-error-50) !important;
+  border: none;
+  background-color: transparent;
+}
+
+.button--orange:disabled,
+.button--orange[aria-disabled="true"],
+a.button--orange[aria-disabled="true"],
+button.button--orange[aria-disabled="true"] {
+  color: var(--dnero-blue-40, #5E9BFF) !important;
+  border: none;
+  background-color: transparent;
+}
