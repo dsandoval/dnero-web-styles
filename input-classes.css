@@ -726,9 +726,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: var(--dnero-x-s) solid var(--dnero-semantic-disabled-10) !important;
-  -webkit-text-fill-color: var(--dnero-semantic-disabled-10) !important;
-  caret-color: var(--dnero-semantic-disabled-10) !important;
+  border: var(--dnero-x-s) solid var(--color-border-default) !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  caret-color: var(--color-text) !important;
 
   /* Fuerza fondo transparente y elimina amarillo del autofill */
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
