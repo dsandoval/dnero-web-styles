@@ -1,8 +1,24 @@
+/* Container principal del slider */
+.testimonial-slider-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 457px);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+}
+
 /* ========================================
    TESTIMONIAL CARDS - Base Styles
    ======================================== */
 
-/* Clase base para todas las cards */
 .testimonial-card {
   display: flex;
   width: 457px;
@@ -14,9 +30,9 @@
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 
-/* Card CON imagen de fondo */
 .testimonial-card--with-bg {
   background: var(--dnero-secondary-orange);
   background-position: center;
@@ -24,7 +40,6 @@
   background-repeat: no-repeat;
 }
 
-/* Card SIN imagen de fondo */
 .testimonial-card--no-bg {
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -62,22 +77,24 @@
   border-radius: 0 0 20px 20px;
 }
 
-/* Content con blur (para cards con imagen) */
 .testimonial-content--with-blur {
   color: white;
-  background: linear-gradient(180deg, rgba(139, 183, 255, 0.00) 0%, #4285F4 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(139, 183, 255, 0) 0%,
+    #4285f4 100%
+  );
   background-blend-mode: multiply;
   backdrop-filter: blur(4.4px);
 }
 
-/* Content sin blur (para cards sin imagen) */
 .testimonial-content--no-blur {
   height: 127px;
   margin-bottom: 11px;
   padding-top: 0;
   padding-left: 14px;
   padding-right: 12px;
-  color: var(--dnero-primary-blue, #4285F4);
+  color: var(--dnero-primary-blue, #4285f4);
   background: transparent;
 }
 
@@ -142,12 +159,110 @@
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - SLIDER BEHAVIOR
    ======================================== */
 
-@media (max-width: 768px) {
+/* 1280px - Muestra 2 cards + preview de la tercera */
+@media (max-width: 1439px) {
+  .testimonial-slider {
+    grid-template-columns: repeat(6, 457px);
+    grid-template-rows: 1fr;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 20px;
+    justify-content: flex-start;
+  }
+
   .testimonial-card {
-    width: 100%;
-    max-width: 457px;
+    scroll-snap-align: start;
+  }
+
+  /* Scrollbar personalizada */
+  .testimonial-slider::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .testimonial-slider::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+  .testimonial-slider::-webkit-scrollbar-thumb {
+    background: rgba(66, 133, 244, 0.3);
+    border-radius: 10px;
+  }
+
+  .testimonial-slider::-webkit-scrollbar-thumb:hover {
+    background: rgba(66, 133, 244, 0.5);
+  }
+
+  /* Indicador visual de que es arrastrable */
+  .testimonial-slider {
+    cursor: grab;
+  }
+
+  .testimonial-slider:active {
+    cursor: grabbing;
+  }
+}
+
+/* 1024px - Muestra 2 cards completas */
+@media (max-width: 1279px) {
+  .testimonial-slider {
+    gap: 16px;
+  }
+}
+
+/* 768px - Muestra 1 card + preview */
+@media (max-width: 1023px) {
+  .testimonial-card {
+    width: 457px;
+  }
+
+  .testimonial-slider {
+    grid-template-columns: repeat(6, 460px);
+    gap: 16px;
+  }
+}
+
+/* Mobile 768px - 1 card + preview de la siguiente */
+@media (max-width: 768px) {
+  .testimonial-slider-wrapper {
+    padding: 0;
+  }
+
+  .testimonial-slider {
+    grid-template-columns: repeat(6, 460px);
+    gap: 16px;
+    padding: 10px 20px;
+  }
+
+  .testimonial-card {
+    width: 457px;
+  }
+}
+
+/* Mobile 480px - Solo 1 card centrada */
+@media (max-width: 480px) {
+  .testimonial-slider-wrapper {
+    padding: 0 20px;
+  }
+
+  .testimonial-slider {
+    grid-template-columns: repeat(6, calc(100vw - 40px));
+    gap: 20px;
+    padding: 0;
+  }
+
+  .testimonial-card {
+    width: 94%;
+    max-width: 100%;
+  }
+
+  .testimonial-text {
+    font-size: 13px !important;
   }
 }
