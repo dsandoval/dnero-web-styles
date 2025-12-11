@@ -255,6 +255,7 @@
     grid-template-columns: repeat(6, calc(100vw - 40px));
     gap: 20px;
     padding: 0;
+    scrollbar-width: none;
   }
 
   .testimonial-card {
