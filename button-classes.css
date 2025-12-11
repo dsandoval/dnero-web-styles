@@ -353,7 +353,7 @@ button.button--orange[aria-disabled="true"] {
 .button--yellow-green,
 a.button--yellow-green,
 button.button--yellow-green {
-  color: var(--dnero-neutral-white) !important;
+  color: var(--dnero-secondary-blue) !important;
   border: none;
   background-color: var(--dnero-secondary-yellow-green);
 }
@@ -361,7 +361,7 @@ button.button--yellow-green {
 .button--yellow-green:hover,
 a.button--yellow-green:hover,
 button.button--yellow-green:hover {
-  color: var(--dnero-neutral-white) !important;
+  color: var(--dnero-secondary-blue) !important;
   border: none;
   background-color: var(--dnero-semantic-warning-70);
 }
@@ -369,7 +369,7 @@ button.button--yellow-green:hover {
 .button--yellow-green:active,
 a.button--yellow-green:active,
 button.button--yellow-green:active {
-  color: var(--dnero-neutral-white) !important;
+  color: var(--dnero-secondary-blue) !important;
   border: none;
   background-color: var(--dnero-semantic-warning-90);
 }
@@ -377,7 +377,7 @@ button.button--yellow-green:active {
 .button--yellow-green:focus,
 a.button--yellow-green:focus,
 button.button--yellow-green:focus {
-  color: var(--dnero-neutral-white) !important;
+  color: var(--dnero-secondary-blue) !important;
   border: none;
   background-color: var(--dnero-semantic-warning-90);
 }
@@ -386,7 +386,7 @@ button.button--yellow-green:focus {
 .button--yellow-green[aria-disabled="true"],
 a.button--yellow-green[aria-disabled="true"],
 button.button--yellow-green[aria-disabled="true"] {
-  color: var(--dnero-neutral-white) !important;
+  color: var(--dnero-secondary-blue) !important;
   border: none;
   background-color: var(--dnero-semantic-disabled-80);
 }
