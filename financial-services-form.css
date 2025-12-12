@@ -1,0 +1,71 @@
+.financial-form-container {
+  max-width: 571px;
+  background-color: var(--dnero-background-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  padding: 40px 40px;
+  border-radius: 40px;
+}
+.financial-form{
+  display: flex;
+  flex-direction: column;
+}
+.financial-form-title {
+  margin-bottom: 16px !important;
+}
+.policy-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-logo{
+  padding-bottom: 30px;
+}
+
+.financial-input-field {
+  margin: 0 0 16px 0 !important;
+  width: 100% !important;
+}
+
+.financial-input-field input {
+  width: 100% !important;
+}
+
+.financial-checkbox-field {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  max-width: 100%;
+  padding: 0 !important;
+}
+
+.financial-success-message{
+  display: none;
+  text-align: center;
+  gap: 20px;
+}
+
+.form-hyperlink{
+  text-decoration: underline !important;
+  color: black !important;
+}
+
+@media (max-width: 768px) {
+  .financial-input-field {
+    width: var(--form-max-width-mobile) !important;
+  }
+
+  .financial-input-field input {
+    width: var(--form-max-width-mobile) !important;
+  }
+
+  .button--l-100 {
+    max-width: var(--form-max-width-mobile) !important;
+    width: var(--form-max-width-mobile) !important;
+  }
+}
