@@ -25,6 +25,7 @@
 
 .form-logo{
   padding-bottom: 30px;
+  align-self: center;
 }
 
 .financial-input-field {
@@ -59,7 +60,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 12px
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
