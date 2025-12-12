@@ -1,0 +1,280 @@
+/* ==========================================================================
+   DNERO - CTA & FAQ SECTIONS
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CTA SECTION
+   ========================================================================== */
+
+/* CTA Title */
+.cta-title-wrapper {
+    display: block;
+    margin-bottom: 24px;
+}
+
+/* CTA Description Text */
+.cta-text-wrapper {
+    display: block;
+    margin-bottom: 24px;
+    width: 552px;
+}
+
+/* CTA Evaluation Button */
+.cta-button-evaluation {
+    margin-bottom: 24px;
+}
+
+/* CTA Subtitle */
+.cta-subtitle {
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+/* CTA Action Buttons Container */
+.cta-action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   2. FAQ SECTION
+   ========================================================================== */
+
+/* FAQ Main Container */
+.dnero-faq-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* FAQ List Container */
+.dnero-faq-list {
+    width: 546px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin; /* Firefox - delgada */
+    scrollbar-color: transparent transparent; /* Firefox - invisible */
+}
+
+/* FAQ Items */
+.dnero-faq-item {
+    border-bottom: 1px solid var(--dnero-semantic-disabled-50);
+}
+
+/* FAQ Question (Header) */
+.dnero-faq-item:first-child .dnero-faq-question {
+    padding-top: 0px !important;
+}
+
+.dnero-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 30px 0px;
+    cursor: pointer;
+    user-select: none;
+    gap: 20px;
+    background: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.dnero-faq-question:hover {
+    background: #fafafa;
+}
+
+.dnero-faq-question-text {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* Chevron Icon */
+.dnero-faq-chevron {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.dnero-faq-chevron svg {
+    width: 100%;
+    height: 100%;
+    fill: #333333;
+}
+
+.dnero-faq-item.active .dnero-faq-chevron {
+    transform: rotate(180deg);
+}
+
+/* FAQ Answer (Collapsible Content) */
+.dnero-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #ffffff;
+}
+
+.dnero-faq-item.active .dnero-faq-answer {
+    max-height: 500px;
+    padding: 0 0px 30px 0px;
+}
+
+.dnero-faq-answer-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Desktop Medium - 1280px */
+@media (max-width: 1280px) {
+    .dnero-faq-list {
+        width: 514px;
+    }
+    
+    .dnero-faq-container {
+        margin: 0 50px;
+        width: 420px;
+    }
+}
+
+/* Tablet Large - 1024px */
+@media (max-width: 1024px) {
+    .cta-text-wrapper {
+        width: 475px;
+    }
+    
+    .faq-first-container {
+        max-width: 465px;
+    }
+    
+    .dnero-faq-list {
+        width: 420px;
+    }
+    
+    .dnero-faq-container {
+        margin: 0 50px;
+    }
+}
+
+/* Tablet - 1023px */
+@media (max-width: 1023px) {
+    .dnero-faq-list {
+        width: 420px;
+    }
+    
+    .dnero-faq-container {
+        margin: 0px;
+    }
+}
+
+/* Tablet Small - 768px */
+@media (max-width: 768px) {
+    /* CTA Styles */
+    .cta-text-wrapper {
+        width: auto;
+    }
+    
+    .faq-first-container {
+        max-width: 546px;
+        width: auto;
+    }
+    
+    /* FAQ Styles */
+    .dnero-faq-list {
+        max-width: 546px;
+        width: 100%;
+    }
+    
+    .dnero-faq-container {
+        margin: auto;
+        max-width: 546px;
+        width: 100%;
+    }
+    
+    .dnero-faq-question {
+        padding: 24px 0px;
+    }
+    
+    .dnero-faq-question-text {
+        font-size: 15px;
+    }
+    
+    .dnero-faq-item.active .dnero-faq-answer {
+        padding: 24px 0;
+    }
+    
+    .dnero-faq-answer-text {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Large - 480px */
+@media (max-width: 480px) {
+    .cta-text-wrapper {
+        max-width: 350px;
+    }
+    
+    .faq-first-container {
+        max-width: 465px;
+    }
+    
+    .dnero-faq-container {
+        max-width: 355px;
+    }
+    
+    .dnero-faq-list {
+        max-width: 355px;
+    }
+    
+    .dnero-faq-question {
+        padding: 30px 0px 30px 0px;
+    }
+    
+    .dnero-faq-question-text {
+        font-size: 15px;
+    }
+    
+    .dnero-faq-item.active .dnero-faq-answer {
+        padding: 0 24px 20px 0px;
+    }
+    
+    .dnero-faq-answer-text {
+        font-size: 14px;
+    }
+}
+
+/* Mobile - 393px */
+@media (max-width: 393px) {
+    .cta-title-wrapper {
+        max-width: 348px;
+        width: 348px;
+    }
+    
+    .cta-text-wrapper {
+        max-width: 335px;
+    }
+    
+    .faq-first-container {
+        max-width: 465px;
+    }
+    
+    .dnero-faq-container {
+        max-width: 322px;
+    }
+    
+    .dnero-faq-list {
+        max-width: 322px;
+    }
+}
