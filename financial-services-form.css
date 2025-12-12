@@ -55,6 +55,13 @@
   color: black !important;
 }
 
+.exit-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px
+}
+
 @media (max-width: 768px) {
   .financial-input-field {
     width: var(--form-max-width-mobile) !important;
