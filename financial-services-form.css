@@ -38,7 +38,7 @@
 
 .financial-checkbox-field {
   display: flex;
-  align-items: start;
+  align-items: start !important;
   gap: 12px;
   max-width: 100%;
   padding: 0 !important;
