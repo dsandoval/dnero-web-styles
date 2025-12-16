@@ -1,0 +1,39 @@
+/* Desktop size */
+.custom-reel-video {
+  width: 478px;
+  height: 722px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.custom-reel-video .video-wrapper {
+  position: relative;
+  width: 478px;
+  height: 722px;
+  border-radius: 40px;
+  overflow: hidden;
+  transform: translateZ(0);
+  background: #000;
+}
+.custom-reel-video .video-wrapper video {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%; height: 100%;
+  min-width: 100%; min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) translateZ(0);
+}
+
+/* Mobile size */
+@media (max-width: 767px) {
+  .custom-reel-video,
+  .custom-reel-video .video-wrapper {
+    width: 353px !important;
+    height: 533px !important;
+    max-width: 100% !important; 
+    min-width: 0 !important;        
+  }
+  
+  .custom-reel-video {
+    flex-shrink: 0;         
+  }
+}
