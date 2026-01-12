@@ -70,6 +70,13 @@
     width: var(--form-max-width-mobile) !important;
   }
 
+  .policy-container {
+    padding-bottom: 10px;
+  }
+  .form-hyperlink{
+    text-align: center;
+  }
+
   .financial-input-field input {
     width: var(--form-max-width-mobile) !important;
   }
