@@ -112,8 +112,8 @@
   }
 
   .button--l-100 {
-    max-width: var(--form-max-width-mobile) !important;
-    width: var(--form-max-width-mobile) !important;
+    max-width: var(--form-max-width-mobile);
+    width: var(--form-max-width-mobile);
   }
 
   .countdown {
