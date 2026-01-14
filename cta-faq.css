@@ -43,7 +43,7 @@
 
 /* FAQ Main Container */
 .dnero-faq-container {
-    max-width: 600px;
+    max-width: 610px;
     width: 100%;
     margin: 0 auto;
 }
@@ -54,9 +54,6 @@
     height: 500px;
     background: #ffffff;
     border-radius: 8px;
-    overflow-x: auto;
-    scrollbar-width: thin; /* Firefox - delgada */
-    scrollbar-color: transparent transparent; /* Firefox - invisible */
 }
 
 /* FAQ Items */
