@@ -66,6 +66,12 @@
 }
 
 @media (max-width: 768px) {
+  .financial-form-container {
+    padding: 26px 5px;
+  }
+  .financial-form-title-container {
+    max-width: 329px;
+  }
   .financial-input-field {
     width: var(--form-max-width-mobile) !important;
   }
