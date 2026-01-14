@@ -43,7 +43,7 @@
 
 /* FAQ Main Container */
 .dnero-faq-container {
-    max-width: 610px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
 }
@@ -51,7 +51,8 @@
 /* FAQ List Container */
 .dnero-faq-list {
     width: 546px;
-    height: 500px;
+    min-height: 500px;
+    max-height: 610px;
     background: #ffffff;
     border-radius: 8px;
 }
