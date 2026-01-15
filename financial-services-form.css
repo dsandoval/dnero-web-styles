@@ -58,7 +58,7 @@
 
 .exit-button-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   gap: 12px;
   justify-content: center;
