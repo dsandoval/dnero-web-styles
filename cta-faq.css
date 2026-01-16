@@ -70,7 +70,7 @@
 .dnero-faq-question {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px 10px 30px 0px;
     cursor: pointer;
     user-select: none;
