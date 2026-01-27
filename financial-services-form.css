@@ -74,6 +74,16 @@
   margin-bottom: 25px;
 }
 
+.blue-link {
+  color: var(--dnero-primary-60);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
 @media (max-width: 768px) {
   .button-323-width {
     margin-left: auto;
