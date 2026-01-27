@@ -249,7 +249,7 @@
 /* Mobile 480px - Solo 1 card centrada */
 @media (max-width: 480px) {
   .testimonial-slider-wrapper {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 
   .testimonial-slider {
