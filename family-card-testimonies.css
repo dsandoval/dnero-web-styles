@@ -249,18 +249,18 @@
 /* Mobile 480px - Solo 1 card centrada */
 @media (max-width: 480px) {
   .testimonial-slider-wrapper {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .testimonial-slider {
-    grid-template-columns: repeat(6, calc(100vw - 40px));
+    grid-template-columns: repeat(6, calc(100vw - 70px));
     gap: 20px;
     padding: 0;
     scrollbar-width: none;
   }
 
   .testimonial-card {
-    width: 94%;
+    width: 100%;
     max-width: 100%;
   }
 
