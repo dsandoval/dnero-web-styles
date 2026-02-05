@@ -58,7 +58,7 @@
 
 .exit-button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   gap: 12px;
   justify-content: center;
@@ -85,6 +85,14 @@
 }
 
 @media (max-width: 768px) {
+  .exit-button-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
   .button-323-width {
     margin-left: auto !important;
     margin-right: auto !important;
